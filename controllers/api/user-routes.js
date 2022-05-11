@@ -3,7 +3,7 @@ const { ValidationError } = require('sequelize/types');
 const { post } = require('.');
 const { User } = require('../../models');
 
-// GET api/users
+// GET (read) api/users
 router.get('/', (req, res) => {
     User.findAll({
         // keep password private when information is grabbed
@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
     });
 });
 
-// GET api/users/:id
+// GET (read) api/users/:id
 router.get('/:id', (req, res) => {
     // access User model & find read singular ID
     // read as SELECT * FROM users WHERE ID = i
@@ -63,5 +63,26 @@ router.get('/:id', (req, res) => {
     .catch(err => {
         console.log(err);
         res.status(500).json(err);
+    });
+});
+
+// POST (create) api/users
+router.post('/', (req, res) => {
+    // expects {username: 'Kyle', email: '7krich@gmail.com', password: 'password123'}
+    // created acts much like INSERT INTO users (username, email, password) VALUES ("","","")
+    User.create({
+        username: req.body.username,
+        email: req.body.email,
+        password: req.body.password
+    })
+    .then(dbUserData => {
+        // save below for when sessions are added
+        // req.session.save(() => {
+        //     req.sessions.user_id = dbUserData.id;
+        //     req.sessions.username = dbUserData.username;
+        //     req.sessions.loggedIn = true;
+
+            res.json(dbUserData);
+        // })
     });
 });
