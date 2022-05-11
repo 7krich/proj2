@@ -50,7 +50,7 @@ User.init(
             updatedUserData.password,
             10
             );
-            return updatedUserData;
+            return uptedUserData;
         },
         },
         sequelize,
