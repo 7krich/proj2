@@ -135,4 +135,5 @@ router.post('/logout', (req, res) => {
 });
 
 // DELETE (non-MVP)
+// PUT /api/users/1 (non-MVP)
 
