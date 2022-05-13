@@ -52,6 +52,10 @@ Post.init(
             type: DataTypes.STRING,
             allowNull: false
         },
+        anonymous: {
+            type: DataTypes.BOOLEAN,
+            default: false
+        },
         user_id: {
             type: DataTypes.INTEGER,
             references: {
