@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const { ValidationError } = require('sequelize/types');
 const { post } = require('.');
 const { User } = require('../../models');
 
@@ -137,3 +136,4 @@ router.post('/logout', (req, res) => {
 // DELETE (non-MVP)
 // PUT /api/users/1 (non-MVP)
 
+module.exports = router;
