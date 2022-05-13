@@ -18,6 +18,10 @@ Comment.init(
                 len: [1]
             }
         },
+        anonymous: {
+            type: DataTypes.BOOLEAN,
+            default: false
+        },
         user_id: {
             type: DataTypes.INTEGER,
             references: {
