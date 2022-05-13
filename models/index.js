@@ -11,7 +11,7 @@ User.hasMany(Post, {
 
 // linking the post to the user id - the post can belong to one user, not many: belongsTo
 Post.belongsTo(User, {
-    foreignKey: 'user_id',
+    foreignKey: 'user_id'
 });
 
 // linking the user to many posts - viewing their voted on posts 
@@ -45,7 +45,7 @@ User.hasMany(Vote, {
 
 // posts votes
 Post.hasMany(Vote, {
-    foreignKey: 'post_id'
+    foreignKey: 'post_id',
 });
 
 Comment.belongsTo(User, {
