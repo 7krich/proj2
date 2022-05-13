@@ -10,6 +10,14 @@ Vote.init(
             primaryKey: true,
             autoIncrement: true
         },
+        up_vote: {
+            type: DataTypes.BOOLEAN,
+            default: false
+        },
+        down_vote: {
+            type: DataTypes.BOOLEAN,
+            default: false
+        },
         user_id: {
             type: DataTypes.INTEGER,
             allowNull: false,

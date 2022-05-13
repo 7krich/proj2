@@ -18,7 +18,10 @@ class Post extends Model {
                     'title',
                     'created_at',
                     [
-                        sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count'
+                        sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id & vote.up_vote = true)'), 'upvote_count'
+                    ],
+                    [
+                        sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id & vote.down_vote = true)'), 'downvote_count'
                     ]
                 ],
                 include: [
@@ -48,16 +51,13 @@ Post.init(
             type: DataTypes.STRING,
             allowNull: false
         },
-        post_url: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                isURL: true
-            }
-        },
         post_content: {
             type: DataTypes.STRING,
             allowNull: false
+        },
+        anonymous: {
+            type: DataTypes.BOOLEAN,
+            default: false
         },
         user_id: {
             type: DataTypes.INTEGER,
