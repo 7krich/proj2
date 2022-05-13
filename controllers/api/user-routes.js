@@ -51,7 +51,7 @@ router.get('/:id', (req, res) => {
         ]
     })
     .then(dbUserData => {
-        // if no users with taht id are found
+        // if no users with that id are found
         if(!dbUserData) {
             //let user know response was recieved but no users were found
             res.status(404).json({ message: 'No users found.' });
@@ -77,12 +77,12 @@ router.post('/', (req, res) => {
     })
     .then(dbUserData => {
          req.session.save(() => {
-             req.sessions.user_id = dbUserData.id;
-             req.sessions.username = dbUserData.username;
-             req.sessions.loggedIn = true;
+             req.session.user_id = dbUserData.id;
+             req.session.username = dbUserData.username;
+             req.session.loggedIn = true;
 
             res.json(dbUserData);
-         })
+         });
     });
 });
 
