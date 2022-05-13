@@ -48,18 +48,22 @@ Post.hasMany(Vote, {
     foreignKey: 'post_id',
 });
 
+// each posted comment belongs to a particular user (ref user id)
 Comment.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
+// each comment belongs to a particular post (ref post id)
 Comment.belongsTo(Post, {
     foreignKey: 'post_id'
 });
 
+// a user can add many comments (ref user id)
 User.hasMany(Comment, {
     foreignKey: 'user_id'
 });
 
+// a single post can have many comments (ref post id)
 Post.hasMany(Comment, {
     foreignKey: 'post_id'
 });
