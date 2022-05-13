@@ -24,6 +24,7 @@ const sess = {
 };
 
 app.use(session(sess));
+// register hbs engine with the express app
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.use(express.json());
