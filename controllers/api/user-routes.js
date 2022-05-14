@@ -67,17 +67,22 @@ router.get('/:id', (req, res) => {
 
 // POST (create) api/users
 router.post('/', (req, res) => {
-    // expects {username: 'Kyle', email: '7krich@gmail.com', password: 'password123'}
-    // created acts much like INSERT INTO users (username, email, password) VALUES ("","","")
+    // expects {username: 'Kyle', email: '7krich@gmail.com', password: 'password123', first_name: 'Kyle', last_name: 'Richnafsky'}
+    // created acts much like INSERT INTO users (username, email, password) VALUES ("","","","","")
     User.create({
         username: req.body.username,
         email: req.body.email,
-        password: req.body.password
+        password: req.body.password,
+        first_name: req.body.first_name,
+        last_name: req.body.last_name
     })
     .then(dbUserData => {
+        // access session information
          req.session.save(() => {
              req.session.user_id = dbUserData.id;
              req.session.username = dbUserData.username;
+             req.session.first_name = dbUserData.first_name;
+             req.session.last_name = dbUserData.last_name;
              req.session.loggedIn = true;
 
             res.json(dbUserData);
@@ -114,6 +119,8 @@ router.post('/login', (req, res) => {
             // declare session variables
             req.session.user_id = dbUserData.id;
             req.session.username = dbUserData.username;
+            res.session.first_name = dbUserData.first_name;
+            res.session.last_name = dbUserData.last_name;
             req.session.loggedIn = true;
         
         res.json({ user: dbUserData, message: 'You are now logged in!' });

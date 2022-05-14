@@ -9,8 +9,9 @@ router.get('/', (req, res) => {
     Post.findAll({
         order: [['created_at', 'DESC']],
         //query config
-        attributes: ['id',
-        'post_url',
+        attributes: [
+        'id',
+        'post_content',
         'title',
         'created_at',
         [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
@@ -18,7 +19,13 @@ router.get('/', (req, res) => {
         include: [
             {
                 model: Comment,
-                attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                attributes: [
+                'id',
+                'comment_text',
+                'post_id',
+                'user_id',
+                'created_at'
+                ],
                 include: {
                     model: User,
                     attributes: ['username']
@@ -44,7 +51,7 @@ router.get('/:id', (req, res) => {
             id: req.params.id
         },
         attributes: ['id',
-            'post_url',
+            'post_content',
             'title',
             'created_at',
             [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
@@ -52,7 +59,13 @@ router.get('/:id', (req, res) => {
         include: [
             {
                 model: Comment,
-                attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                attributes: [
+                'id',
+                'comment_text',
+                'post_id',
+                'user_id',
+                'created_at'
+                ],
                 include: {
                     model: User,
                     attributes: ['username']
@@ -82,7 +95,7 @@ router.post('/', withAuth, (req, res) => {
     // expects {title: '', post_url: 'https://xx.com/press', user_id: 1}
     Post.create({
         title: req.body.title,
-        post_url: req.body.post_url,
+        post_content: req.body.post_content,
         user_id: req.session.user_id
     })
     .then(dbPostData => res.json(dbPostData))
