@@ -6,9 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The B Word</title>
     <!--<link rel="stylesheet" href="/public/src/assets/foundation.css">-->
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
     <link rel="stylesheet" href="/public/src/assets/app.css">
 </head>
 
+<!--Nav placeholder for pull request-->
+<div class="nav">
+      <div class="to-right">
+        <ul class="pages">
+          <li><a href="#">Sign-Up</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">New Post</a></li>
+        </ul>
+      </div>
+    </div>
 <body>
     <div class="wrapper">
         <header>
@@ -16,12 +27,16 @@
                 <a href="/">The B Word</a>
             </h1>
             <nav>
+                <div class="to-right">
+                    <ul class="page">
                 {{#if loggedIn}}
                 <a href="/dashboard">Dashboard</a>
                 <button id="logout" class="logout-button">Logout</button>
                 {{else}}
                 <a href="/login">Login</a>
                 {{/if}}
+                    </ul>
+                </div>
             </nav>
         </header>
 
