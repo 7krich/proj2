@@ -1,6 +1,5 @@
 const router = require('express').Router();
-const { post } = require('.');
-const { User } = require('../../models');
+const { User, Post, Comment, Vote } = require('../../models');
 
 // GET (read) api/users
 router.get('/', (req, res) => {
@@ -25,23 +24,28 @@ router.get('/:id', (req, res) => {
         where: {
             id: req.params.id
         },
+        // JOIN Post, Comment & Post models to User
+        // expressed as an array of objects
         include: [
             {
-                model: post,
+                // JOIN Post with User
+                model: Post,
                 attributes: [
                     'id',
                     'title',
-                    'post_url',
+                    'post_content',
                     'created_at'
                 ]
             },
             {
+                // JOIN Comment with User
                 model: Comment,
                 attributes: [
                     'id',
                     'comment_text',
                     'created_at'
                 ],
+                // JOIN Post with Comment
                 include: {
                     model: Post,
                     attributes: ['title']
@@ -57,7 +61,7 @@ router.get('/:id', (req, res) => {
             return;
         }
         // if found return user data
-        res.json(dbUserdata);
+        res.json(dbUserData);
     })
     .catch(err => {
         console.log(err);
@@ -140,7 +144,29 @@ router.post('/logout', (req, res) => {
     }
 });
 
+router.put('/:id', (req, res) => {
+    // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
+  
+    // pass in req.body instead to only update what's passed through
+    User.update(req.body, {
+      individualHooks: true,
+      where: {
+        id: req.params.id
+      }
+    })
+      .then(dbUserData => {
+        if (!dbUserData) {
+          res.status(404).json({ message: 'No user found with this id' });
+          return;
+        }
+        res.json(dbUserData);
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+});
+
 // DELETE (non-MVP)
-// PUT /api/users/1 (non-MVP)
 
 module.exports = router;
