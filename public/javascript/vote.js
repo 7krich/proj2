@@ -10,7 +10,7 @@ async function upVoteHandler(event) {
         body: JSON.stringify({
             post_id: id
         }),
-        headers: {}
+        headers: { "Content-Type": "application/json" }
     });
 
     if(response.ok) {
@@ -33,7 +33,7 @@ async function downVoteHandler(event) {
         body: JSON.stringify({
             post_id: id
         }),
-        headers: {}
+        headers: { "Content-Type": "application/json" }
     });
 
     if(response.ok) {
