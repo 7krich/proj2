@@ -17,27 +17,36 @@
           <li><a href="#signup">Sign-Up</a></li>
           <li><a href="#login-form">Login</a></li>
           <li><a href="#">New Post</a></li>
-        </ul>
+          <li><a href="#">Logout</a></li>
+        </ul><div class="login-form"></div>
       </div>
     </div>
 <body>
     <div class="wrapper">
         <header>
-            <h1>
-                <a href="/">The B Word</a>
-            </h1>
             <nav>
                 <div class="to-right">
                     <ul class="page">
                 {{#if loggedIn}}
                 <a href="/dashboard">Dashboard</a>
+                <li>
                 <button id="logout" class="logout-button">Logout</button>
+                </li>
                 {{else}}
                 <a href="/login">Login</a>
+                <li>
+                    <button class="signup" id="signup-form">Sign Up</button>
+                </li>
+                <li>
+                    <button class="login" id="login-form">Login</button>
+                </li>
                 {{/if}}
                     </ul>
                 </div>
             </nav>
+            <h1>
+                <a href="/">The B Word</a>
+            </h1>
         </header>
 
         <main>
