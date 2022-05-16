@@ -16,10 +16,10 @@ router.get('/', (req, res) => {
 
 // GET (read) api/categories/:id
 router.get('/:id', (req, res) => {
-    // access User model & find read singular ID
+    // access Category model & find read singular ID
     // read as SELECT * FROM category WHERE ID = i
     Category.findOne({
-        // JOIN Post, Comment & Post models to User
+        // JOIN Post, Comment & Post models to Category
         // expressed as an array of objects
         include: [
             {
@@ -51,11 +51,11 @@ router.get('/:id', (req, res) => {
     .then(dbCategoryData => {
         // if no categories with that id are found
         if(!dbCategoryData) {
-            //let user know response was recieved but no users were found
+            //let user know response was recieved but no categories were found
             res.status(404).json({ message: 'No categories found.' });
             return;
         }
-        // if found return user data
+        // if found return category data
         res.json(dbCategoryData);
     })
     .catch(err => {
