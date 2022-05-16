@@ -66,6 +66,13 @@ Post.init(
                 key: 'id'
             }
         },
+        category_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'category',
+                key: 'id'
+            }
+        }
         // comment_id: {
         //     type: DataTypes.INTEGER,
         //     references: {

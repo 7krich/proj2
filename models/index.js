@@ -2,6 +2,7 @@ const User = require('./User');
 const Post = require('./Post');
 const Vote = require('./Vote'); 
 const Comment = require('./Comment');
+const Category = require('./Category');
 
 // create associations 
 // linking the user id to the post - one user can have many posts: hasMany
@@ -68,5 +69,14 @@ Post.hasMany(Comment, {
     foreignKey: 'post_id'
 });
 
+//  many posts can have many categories 
 
-module.exports = { User, Post, Vote, Comment };
+// one post can have many categories
+
+// one category can have many posts 
+
+// many categories can have many posts 
+
+
+
+module.exports = { User, Post, Vote, Comment, Category };
