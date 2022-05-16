@@ -115,7 +115,7 @@ router.post('/login', (req, res) => {
         const validPassword = dbUserData.checkPassword(req.body.password);
         // if match returns false
         if(!validPassword) {
-            res.status(400).json({ mesage: 'Incorrect password!' });
+            res.status(400).json({ message: 'Incorrect password!' });
             return;
         }
 
