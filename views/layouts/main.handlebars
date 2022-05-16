@@ -16,47 +16,27 @@
             </h1>
             <nav>
                 {{#if loggedIn}}
+                <a href="/dashboard">Dashboard</a>
                 <button id="logout" class="logout-button">Logout</button>
                 {{else}}
-                <div class="login-form">
-                    <label for="email-login">Email:</label>
-                    <input type="email" placeholder="Enter Email" name="email" id="email-login" required>
-                    <label for="password-login">Password:</label>
-                    <input type="password" placeholder="Enter Password" name="password" id="password-login" required>
-                    <a href="/login">Login</a>
+                <a href="/login">Login</a>
                 {{/if}}
             </nav>
         </header>
-        <main>
-            <nav>
-                <form class="signup" id="signup">
-                    <div class="signup-form">
-                        <h1>Sign Up</h1>
-                        <p>Please fill out the form below to create an account.</p>
-                        <br>
-                        <label for="email-signup">Email:</label>
-                        <input type="email" placeholder="Enter Email" name="email" id="email-signup" required>
-                        <label for="password-signup">Password:</label>
-                        <input type="password" placeholder="Enter Password" name="pswrd" id="password-signup" required>
-                        <label for="firstname-signup">First Name:</label>
-                        <input type="text" placeholder="Enter First Name" name="firstname" id="firstname-signup" required>
-                        <label for="lastname-signup">Last Name:</label>
-                        <input type="text" placeholder="Enter Last Name" name="lastname" id="lastname-signup" required>
-                        <label for="username-signup">Username:</label>
-                        <input type="text" placeholder="Enter Username" name="username" id="username-signup" required>
-                        <a href="/login">Sign Up!</a>
-                    </div>
-                </form>
-            </nav>
 
-        </main>
+        <main>
+
+            {{{ body }}}
+
+        </main>g
+
         <footer>
 
         </footer>
+
     </div>
     {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>
     {{/if}}
 </body>
-<script src="/javascript/login.js"></script>
 </html>
