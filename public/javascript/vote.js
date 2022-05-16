@@ -5,7 +5,7 @@ async function upVoteHandler(event) {
         window.location.toString().split('/').length - 1
     ];
 
-    const response = await fetch('/api/posts/vote????', {
+    const response = await fetch('/api/posts/vote', {
         method: 'PUT',
         body: JSON.stringify({
             post_id: id
@@ -28,7 +28,7 @@ async function downVoteHandler(event) {
         window.location.toString().split('/').length - 1
     ];
 
-    const response = await fetch('/api/posts/vote???', {
+    const response = await fetch('/api/posts/vote', {
         method: 'PUT',
         body: JSON.stringify({
             post_id: id
