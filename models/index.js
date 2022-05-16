@@ -70,13 +70,25 @@ Post.hasMany(Comment, {
 });
 
 //  many posts can have many categories 
+Post.hasMany(Category, {
+    foreignKey: 'post_id'
+});
 
 // one post can have many categories
+Post.belongsToMany(Category, {
+    through: Post,
+    as: 'posts',
+    foreignKey: 'post_id'
+});
 
 // one category can have many posts 
+Category.belongsToMany(Post, {
+    through: Category,
+    as: 'categories',
+    foreignKey: 'category_id'
+});
 
 // many categories can have many posts 
-
 
 
 module.exports = { User, Post, Vote, Comment, Category };
