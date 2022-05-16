@@ -20,8 +20,8 @@ Category.init(
         timestamps: false, 
         freezeTableName: true,
         underscored: true,
-        modelName: 'vote'
+        modelName: 'category'
     }
 );
 
-module.exports = Vote;
+module.exports = category;
