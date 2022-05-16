@@ -34,6 +34,7 @@ router.get('/:id', (req, res) => {
                     'id',
                     'title',
                     'post_content',
+                    'category_id',
                     'created_at'
                 ]
             },
