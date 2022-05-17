@@ -31,7 +31,12 @@ app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(__dirname + '/public'));
+// app.get('/', function(req, res) {
+//   res.sendFile(path.join(__dirname + '/views'));
+// });
+
+app.listen(3333);
 
 // turn on routes
 app.use(routes);
