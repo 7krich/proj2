@@ -10,31 +10,29 @@
 </head>
 
 <!--Nav placeholder for pull request-->
-<body>
-    <div class="wrapper">
-        <header>
-            <nav>
-                <div class="to-right">
-                    <ul class="page">
-                {{#if loggedIn}}
-                <li>
-                <button id="logout" class="logout-button">Logout</button>
-                </li>
-                {{else}}
-                <li>
-                    <button class="signup" id="signup-form">Sign Up</button>
-                </li>
-                <li>
-                    <button class="login" id="login-form">Login</button>
-                </li>
-                {{/if}}
-                    </ul>
-                </div>
-            </nav>
-            <h1>
-                <a href="/">The B Word</a>
-            </h1>
-        </header>
+         <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li class="menu-text">LGBTQ+ Resources</li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+        {{#if loggedIn}}
+          <li> <button id="logout" class="logout-button">Logout</button></li>
+        {{else}}
+          <li> <button class="signup" id="signup-form">Sign Up</button></li>
+          <li><button class="login" id="login-form">Login</button></li>
+        {{/if}}
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout large primary">
+      <div class="row column text-center">
+        <h1>The B Word</h1>
+      </div>
+    </div>
 
         <main>
 
