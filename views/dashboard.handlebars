@@ -1,31 +1,39 @@
-<section>
-    <h2>Create New Post</h2>
+<ol class="posts">
+    {{#each posts as |post|}}
+    <li>
+        {{> posts post}}
+    </li>
+    {{/each}}
+</ol>
 
-    <form class="new-post-form">
-        <div>
-            <label for="post-title">Title</label>
-            <input type="text" id="post-title" name="post-title" />
-        </div>
-        <div>
-            <label for="post-url">Link</label>
-            <input type="text" id="post-title" name="post-title" />
-        </div>
-        <button type="submit" class="btn">Create</button>
-    </form>
-</section>
-
-{{#if posts.length}}
-<section>
-    <h2>Your Posts</h2>
-    <ol>
-        {{#each posts as |post|}}
-        <li>
-            {{> post-info post}}
-            <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit Post</a>
-        </li>
-        {{/each}}
-    </ol>
-</section>
-{{/if}}
-
-<script src="/javascript/add-post.js"></script>
+<ul class="filters">
+    <li>Transgender
+        <ul>
+            <li>FTM</li>
+            <li>MTF</li>
+            <li>Non-Binary</li>
+            <li>Coming Out</li>
+            <li>Gender Expression</li>
+            <li>Hormone Replacement Therapy</li>
+            <li>Surgeries</li>
+        </ul>
+    </li>
+    <li>Sexuality</li>
+        <ul>
+            <li>Asexual</li>
+            <li>Bisexual</li>
+            <li>Coming Out</li>
+            <li>Gay</li>
+            <li>Lesbian</li>
+            <li>Pansexual</li>
+            <li>Questioning</li>
+        </ul>
+    <li>Society</li>
+        <ul>
+            <li>LGBT Adoption</li>
+            <li>LGBT Parenting</li>
+            <li>Same-Sex Marriage</li>
+            <li>Social Movements</li>
+            <li>Events</li>
+        </ul>
+</ul>
