@@ -82,15 +82,15 @@ router.post('/', (req, res) => {
     })
     .then(dbUserData => {
         // access session information
-         req.session.save(() => {
-             req.session.user_id = dbUserData.id;
-             req.session.username = dbUserData.username;
-             req.session.first_name = dbUserData.first_name;
-             req.session.last_name = dbUserData.last_name;
-             req.session.loggedIn = true;
+        req.session.save(() => {
+            req.session.user_id = dbUserData.id;
+            req.session.username = dbUserData.username;
+            req.session.first_name = dbUserData.first_name;
+            req.session.last_name = dbUserData.last_name;
+            req.session.loggedIn = true;
 
             res.json(dbUserData);
-         });
+        });
     });
 });
 
