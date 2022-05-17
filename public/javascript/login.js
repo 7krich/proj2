@@ -11,11 +11,11 @@ async function signupFormHandler(event) {
         const response = await fetch("/api/users", {
             method: "post",
             body: JSON.stringify({
-                firstName,
-                lastName,
                 username,
                 email,
-                password
+                password,
+                firstName,
+                lastName,
             }),
             headers: { "Content-Type": "application/json" }
         });
@@ -56,5 +56,3 @@ async function loginFormHandler(event) {
 
 document.querySelector(".login-form").addEventListener("submit", loginFormHandler);
 document.querySelector(".signup-form").addEventListener("submit", signupFormHandler);
-
-module.exports = signupFormHandler, loginFormHandler;

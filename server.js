@@ -33,10 +33,10 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use((req, res) => {
-  res.status(404).render("404page", {title:"404 not found",
-  customstyle: `<link rel="stylesheet" href="/public/src/assets/styles.css">`});
-});
+// app.use((req, res) => {
+//   res.status(404).render("404page", {title:"404 not found",
+//   customstyle: `<link rel="stylesheet" href="/public/src/assets/styles.css">`});
+// });
 
 // turn on routes
 app.use(routes);
