@@ -27,21 +27,35 @@ nav ul li {
     padding: 10px 20px;
     font-weight: heavy;
     font-size: xx-large;
+    border: none;
     color: var(--secondary-color);
 }
 
-nav ul li button #signup{
+#signup-form {
     padding: 10px 15px;
     font-weight: lighter;
     font-size: 1.55vw;
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
     text-decoration: none;
-    color: var(--green-color);
+    border: none;
+    border-radius: 25px;
+    color: #5c765a;
     background-color: var(--green-color);
+}
+
+#login-form {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55vw;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    border: none;
+    border-radius: 25px;
+    color: #664d71;
+    background-color: var(--purple-color);
 }
 
 nav ul li button:hover {
     font-style: italic;
-    border-radius: 25px;
     text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
