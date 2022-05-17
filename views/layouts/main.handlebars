@@ -5,27 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The B Word</title>
-    <link rel="stylesheet" href="/stylesheets/style.css">
+    <!--<link rel="stylesheet" href="/public/src/assets/foundation.css">-->
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <link rel="stylesheet" href="/public/src/assets/app.css">
 </head>
 
+<!--Nav placeholder for pull request-->
 <body>
     <div class="wrapper">
         <header>
+            <nav>
+                <div class="to-right">
+                    <ul class="page">
+                {{#if loggedIn}}
+                <li>
+                <button id="logout" class="logout-button">Logout</button>
+                </li>
+                {{else}}
+                <li>
+                    <button class="signup" id="signup-form">Sign Up</button>
+                </li>
+                <li>
+                    <button class="login" id="login-form">Login</button>
+                </li>
+                {{/if}}
+                    </ul>
+                </div>
+            </nav>
             <h1>
                 <a href="/">The B Word</a>
             </h1>
-            <nav>
-                {{#if loggedIn}}
-                <button id="logout" class="logout-button">Logout</button>
-                {{else}}
-                <div class="login-form">
-                    <label for="email-login">Email:</label>
-                    <input type="email" placeholder="Enter Email" name="email" id="email-login" required>
-                    <label for="password-login">Password:</label>
-                    <input type="password" placeholder="Enter Password" name="password" id="password-login" required>
-                    <a href="/login">Login</a>
-                {{/if}}
-            </nav>
         </header>
         <main>
             <nav>
@@ -57,6 +66,12 @@
     {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>
     {{/if}}
+  <!--  <script src="/public/js/vendor/jquery.js"></script>
+    <script src="/public/js/vendor/what-input.js"></script>
+    <script src="/public/js/vendor/foundation.js"></script>
+    <script src="/server.js"></script>    -->   
+
+    </body>
 </body>
 <script src="/javascript/login.js"></script>
 </html>
