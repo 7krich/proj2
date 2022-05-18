@@ -64,4 +64,17 @@ router.get('/:id', (req, res) => {
     });
 });
 
+// create a category 
+router.post("/", (req, res) => {
+    Category.create({
+        category_name: req.body.category_name,
+    })
+    .then((dbCategoryData) => res.json(dbCategoryData))
+    .catch((err) => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
 // POST create category (non-MVP)
+module.exports = router;
