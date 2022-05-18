@@ -1,0 +1,60 @@
+* {
+    color: var(--dark-outline);
+}
+
+:root {
+    --primary-color: #EDEBE7;
+    --secondary-color: #D2D5D2;
+    --tierary-color: #B7BCBA;
+    --dark-outline: #7F8386;
+    --red-color: #FFB8B8;
+    --yellow-color: #FFFBD0;
+    --green-color: #C8FDC3;
+    --blue-color: #97F2D0;
+    --purple-color: #E6B2FD;
+}
+
+/*Nav CSS*/
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: right;
+    list-style: none;
+}
+
+nav ul li {
+    padding: 10px 20px;
+    font-weight: heavy;
+    font-size: xx-large;
+    border: none;
+    color: var(--secondary-color);
+}
+
+#signup-form {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55vw;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    border: none;
+    border-radius: 25px;
+    color: #5c765a;
+    background-color: var(--green-color);
+}
+
+#login-form {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55vw;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    border: none;
+    border-radius: 25px;
+    color: #664d71;
+    background-color: var(--purple-color);
+}
+
+nav ul li button:hover {
+    font-style: italic;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
