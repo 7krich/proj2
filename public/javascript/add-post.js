@@ -1,3 +1,15 @@
+ var modal = document.getElementById("newpost-popout");
+ var btn = document.getElementById("newpost");
+ var span = document.getElementsByClassName("close")[0];
+
+ btn.onclick = function() {
+   modal.style.display = "block";
+ }
+
+ span.onclick = function() {
+   modal.style.display = "none";
+}
+
 async function newPostHandler(event) {
     event.preventDefault();
 
@@ -21,4 +33,5 @@ async function newPostHandler(event) {
     }
 }
 
+document.querySelector('.newpost').addEventListener('click', newPostHandler);
 document.querySelector('.new-post-form').addEventListener('submit', newPostHandler);
