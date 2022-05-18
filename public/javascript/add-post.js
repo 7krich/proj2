@@ -4,10 +4,12 @@
 
  btn.onclick = function() {
    modal.style.display = "block";
+   console.log('here?')
  }
 
  span.onclick = function() {
    modal.style.display = "none";
+   console.log('orhere')
 }
 
 async function newPostHandler(event) {
@@ -33,5 +35,7 @@ async function newPostHandler(event) {
     }
 }
 
-document.querySelector('.newpost').addEventListener('click', newPostHandler);
-document.querySelector('.new-post-form').addEventListener('submit', newPostHandler);
+document.querySelector('.newpost').addEventListener('click', newPostHandler)
+console.log("hereeee");
+document.querySelector('.new-post-form').addEventListener('submit', newPostHandler)
+console.log("hereeeeq");
