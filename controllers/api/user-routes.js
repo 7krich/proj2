@@ -57,7 +57,7 @@ router.get('/:id', (req, res) => {
     .then(dbUserData => {
         // if no users with that id are found
         if(!dbUserData) {
-            //let user know response was recieved but no users were found
+            //let user know response was received but no users were found
             res.status(404).json({ message: 'No users found.' });
             return;
         }
@@ -83,15 +83,15 @@ router.post('/', (req, res) => {
     })
     .then(dbUserData => {
         // access session information
-         req.session.save(() => {
-             req.session.user_id = dbUserData.id;
-             req.session.username = dbUserData.username;
-             req.session.first_name = dbUserData.first_name;
-             req.session.last_name = dbUserData.last_name;
-             req.session.loggedIn = true;
+        req.session.save(() => {
+            req.session.user_id = dbUserData.id;
+            req.session.username = dbUserData.username;
+            req.session.first_name = dbUserData.first_name;
+            req.session.last_name = dbUserData.last_name;
+            req.session.loggedIn = true;
 
             res.json(dbUserData);
-         });
+        });
     });
 });
 
@@ -145,25 +145,25 @@ router.post('/logout', (req, res) => {
 
 router.put('/:id', (req, res) => {
     // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
-  
+
     // pass in req.body instead to only update what's passed through
     User.update(req.body, {
-      individualHooks: true,
-      where: {
-        id: req.params.id
-      }
+        individualHooks: true,
+        where: {
+            id: req.params.id
+        }
     })
-      .then(dbUserData => {
+    .then(dbUserData => {
         if (!dbUserData) {
-          res.status(404).json({ message: 'No user found with this id' });
-          return;
+            res.status(404).json({ message: 'No user found with this id' });
+            return;
         }
         res.json(dbUserData);
-      })
-      .catch(err => {
+    })
+    .catch(err => {
         console.log(err);
         res.status(500).json(err);
-      });
+    });
 });
 
 // DELETE (non-MVP)

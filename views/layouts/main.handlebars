@@ -1,27 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The B Word</title>
-    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <link rel="stylesheet" href="/public/src/assets/app.css">
 </head>
 
-<body>
-    <div class="wrapper">
-        <header>
-            <h1>
-                <a href="/">The B Word</a>
-            </h1>
-            <nav>
-                {{#if loggedIn}}
-                <button id="logout" class="logout-button">Logout</button>
-                {{else}}
-                <a href="/login">Login</a>
-                {{/if}}
-            </nav>
-        </header>
+<!--Nav placeholder for pull request-->
+         <div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li class="menu-text">LGBTQ+ Resources</li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+        {{#if loggedIn}}
+          <li> <button id="logout" class="logout-button">Logout</button></li>
+        {{else}}
+          <li> <button class="signup" id="signup-form">Sign Up</button></li>
+          <li><button class="login" id="login-form">Login</button></li>
+        {{/if}}
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout large primary">
+      <div class="row column text-center">
+        <h1>The B Word</h1>
+      </div>
+    </div>
 
         <main>
 
@@ -36,6 +47,13 @@
     </div>
     {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>
-    {{/if}}
+
+    {{/if}} 
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+    <script src="/public/javascript/index.js"></script>
 </body>
 </html>
