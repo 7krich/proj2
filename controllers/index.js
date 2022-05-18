@@ -46,15 +46,3 @@ router.delete('/:id',function(req, res, next){
 // Future state is add more tags
 // purple circle potentially opens a new page
 
-// Just make a button in Javascript
-let btn = document.createElement("button");
-btn.innerHTML = "Click Me";
-document.body.appendChild(btn);
-
-// creating rules for the button based on whether it needs to go into a form
-
-let btn = document.createElement("button");
-btn.innerHTML = "Submit";
-btn.type = "submit";
-btn.name = "formBtn";
-document.body.appendChild(btn);
