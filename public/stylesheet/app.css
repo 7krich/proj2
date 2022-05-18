@@ -62,9 +62,8 @@ nav ul li button:hover {
 
 
 .login-options {
-    display: inline-block;
     display: flex;
-    
+    justify-content: space-around;
 }
 
 
@@ -72,8 +71,8 @@ nav ul li button:hover {
     padding: 1rem 1.5em;
     border-radius: .5rem;
     background-color: #74787c;
-    parent: {display: inline-flex};
-    childs: {display: table-cell}
+    display: inline-block;
+    width: 45%;
   }
   
   .login-form h4 {
@@ -129,9 +128,10 @@ nav ul li button:hover {
 
   .signup-form {
     padding: 1rem 1.5em;
-    
+    display: inline-block;
     border-radius: .5rem;
     background-color: #74787c;
+    width: 45%;
   }
   
   .signup-form h4 {
