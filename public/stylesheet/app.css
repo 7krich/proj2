@@ -107,11 +107,11 @@ nav ul li button:hover {
     transition: all ease .4s;
   }
   
-  .login-form-button button{
+  .login-form-button {
     border-radius: 30px;
     border: 1px solid #fff;
     color: #fff;
-    background-color: var(--purple-color)
+    background-color: #836690;
     text-transform: uppercase;
     letter-spacing: 1px;
     width: 100%;
@@ -130,8 +130,9 @@ nav ul li button:hover {
     padding: 1rem 1.5em;
     display: inline-block;
     border-radius: .5rem;
-    background-color: #74787c;
+    background-color: #b3b8be;
     width: 45%;
+    color: black;
   }
   
   .signup-form h4 {
@@ -151,7 +152,7 @@ nav ul li button:hover {
   }
   
   .signup-form input {
-    color: white;
+    color: black;
   }
   
   .signup-form input:focus {
@@ -169,11 +170,11 @@ nav ul li button:hover {
     transition: all ease .4s;
   }
   
-  .login-form-button button{
+  .signup-form-button {
     border-radius: 30px;
     border: 1px solid #fff;
     color: #fff;
-    background-color: var(--purple-color)
+    background-color: #5a947f;
     text-transform: uppercase;
     letter-spacing: 1px;
     width: 100%;
