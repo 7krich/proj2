@@ -59,16 +59,21 @@ nav ul li button:hover {
     text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-.signup-form {
-    margin-left: 50px;
+
+
+.login-options {
+    display: inline-block;
+    display: flex;
+    
 }
 
 
 .login-form {
     padding: 1rem 1.5em;
-    
     border-radius: .5rem;
     background-color: #74787c;
+    parent: {display: inline-flex};
+    childs: {display: table-cell}
   }
   
   .login-form h4 {
