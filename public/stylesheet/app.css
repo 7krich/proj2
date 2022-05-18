@@ -58,3 +58,127 @@ nav ul li button:hover {
     font-style: italic;
     text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
+
+.signup-form {
+    margin-left: 50px;
+}
+
+
+.login-form {
+    padding: 1rem 1.5em;
+    
+    border-radius: .5rem;
+    background-color: #74787c;
+  }
+  
+  .login-form h4 {
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .login-form label {
+    text-transform: uppercase;
+    color: #dbdbdb;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .login-form input {
+    color: white;
+  }
+  
+  .login-form input:focus {
+    opacity: .8;
+  }
+  
+  .email-login,
+  .password-login {
+    border-radius: 30px;
+    border: none;
+    opacity: .1;
+    transition: all ease .4s;
+  }
+  
+  .login-form-button button{
+    border-radius: 30px;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: var(--purple-color)
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    padding: 1rem;
+    transition: all ease .4s;
+  }
+  
+  .login-form-button:hover {
+    background-color: #44c8ed;
+    border-color: #44c8ed;
+  }
+
+
+
+  .signup-form {
+    padding: 1rem 1.5em;
+    
+    border-radius: .5rem;
+    background-color: #74787c;
+  }
+  
+  .signup-form h4 {
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .signup-form label {
+    text-transform: uppercase;
+    color: #dbdbdb;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .signup-form input {
+    color: white;
+  }
+  
+  .signup-form input:focus {
+    opacity: .8;
+  }
+  
+  .firstname-signup,
+  .lastname-signup,
+  .username-signup,
+  .email-signup,
+  .password-signup {
+    border-radius: 30px;
+    border: none;
+    opacity: .1;
+    transition: all ease .4s;
+  }
+  
+  .login-form-button button{
+    border-radius: 30px;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: var(--purple-color)
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    padding: 1rem;
+    transition: all ease .4s;
+  }
+  
+  .login-form-button:hover {
+    background-color: #44c8ed;
+    border-color: #44c8ed;
+  }
+    
+  
