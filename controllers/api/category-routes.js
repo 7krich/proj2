@@ -65,3 +65,5 @@ router.get('/:id', (req, res) => {
 });
 
 // POST create category (non-MVP)
+
+module.exports = router;
