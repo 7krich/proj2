@@ -16,13 +16,17 @@ async function newPostHandler(event) {
     event.preventDefault();
 
     const title = document.querySelector('input[name="post-title"]').value;
-    const post_content = document.querySelector('input[name="post_content"]').value;
+    const post_content = document.querySelector('input[name="post-content"]').value;
+    const anonymous = document.querySelector('input[name="anonymous"]').checked;
+    console.log(title)
+    console.log(post_content)
 
     const response = await fetch('/api/posts', {
         method: 'POST',
         body: JSON.stringify({
             title,
-            post_content
+            post_content,
+            anonymous
         }),
         headers: { 'Content-Type': 'application/json' }
     });

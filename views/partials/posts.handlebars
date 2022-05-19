@@ -2,12 +2,11 @@
   <div class="medium-8 columns">
     <div class="blog-post">
       <a href="{{post_url}}" target="_blank">{{title}}</a>
-      <span>{{post_url}}</span>
       <img class="thumbnail" src="https://placehold.it/850x350">
-      <p>{{post_url}}</p>>
+      <p>{{post_content}}</p>>
       <div class="callout">
         <ul class="menu simple">
-          <li>{{vote_count}} point(s) by {{user.name}} on
+          <li>{{vote_count}} point(s) by {{user.username}} on
             {{created_at}}</li>
           <li><a href="/post/{{id}}">{{comments.length}} comment(s)</a></li>
           <li><button type="submit" id="up-vote-btn"></button></li>
