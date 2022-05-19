@@ -1,4 +1,4 @@
-var sentences = [
+var sentence = [
     'Brain - an organ of soft nervous tissue contained in the skull of vertebrates, functioning as the coordinating center of sensation and intellectual and nervous activity ; Intellectual Capacity',
     'Brave - ready to face and endure danger or pain; showing courage.',
     'Breathtaking - astonishing or awe-inspiring in quality, so as to take ones breath away',
@@ -31,3 +31,13 @@ var sentences = [
     'Best - of the most excellent, effective, or desirable type or quality.',
     'Bitch - express displeasure; grumble; a female dog, wolf, fox, or otter.',
 ]
+
+var randomDiv = document.getElementById("randomWord");
+
+  function generate() {
+    randomSentence = Math.ceil((Math.random() * sentence.length - 1));
+    newText = sentence[randomSentence];
+    randomDiv.innerHTML = newText;
+  }
+
+  generate();
