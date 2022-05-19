@@ -91,7 +91,7 @@ nav ul li button:hover {
 .login-form {
     padding: 1rem 1.5em;
     border-radius: .5rem;
-    background-color: #979797;
+    background-color: #b1b1b1;
     display: inline-block;
     width: 45%;
     box-shadow: 5px 5px #888888;
@@ -152,7 +152,7 @@ nav ul li button:hover {
     padding: 1rem 1.5em;
     display: inline-block;
     border-radius: .5rem;
-    background-color: #979797;
+    background-color: #b1b1b1;
     width: 45%;
     color: black;
     box-shadow: 5px 5px #888888;
@@ -205,7 +205,7 @@ nav ul li button:hover {
     transition: all ease .4s;
   }
   
-  .login-form-button:hover {
+  .signup-form-button:hover {
     background-color: #44c8ed;
     border-color: #44c8ed;
   }
@@ -459,9 +459,6 @@ body {
   text-transform: uppercase;
   position: relative;
   white-space: nowrap;
-  & a {
-    color: lighten(#333, 40%);
-  }
 }
 .comments {
   margin-right: 1rem;
@@ -551,10 +548,80 @@ body {
     font-weight: bold;
   }
 
+
   .singlepostquote {
     font-size: x-large;
     text-align: center;
     font-weight: bold;
+  }
+
+  .singlepost {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    display: block;
+  }
+
+
+
+  .comment-form {
+    padding: 1rem 1.5em;
+    display: flex;
+    display: inline-block;
+    justify-content: space-around;
+    border-radius: .5rem;
+    background-color: #b1b1b1;
+    width: 100%;
+    color: black;
+    box-shadow: 5px 5px #888888;
+    align-items: center;
+  }
+  
+  .comment-form p {
+    color: #22362f;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .comment-form label {
+    text-transform: uppercase;
+    color: #2d473e;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .comment-form input {
+    color: black;
+  }
+  
+  .comment-form input:focus {
+    opacity: .6;
+  }
+  
+  .comment-body {
+    border-radius: 30px;
+    border: none;
+    opacity: .1;
+    transition: all ease .4s;
+  }
+  
+  .singlepost-form-button {
+    border-radius: 30px;
+    border: 1px solid #fff;
+    color: black;
+    background-color: var(--yellow-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    padding: 1rem;
+    transition: all ease .4s;
+  }
+  
+  .singlepost-form-button:hover {
+    background-color: #44c8ed;
+    border-color: #44c8ed;
   }
 
   .footer {
