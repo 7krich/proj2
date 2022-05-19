@@ -32,5 +32,5 @@ async function newFilterHandler(event) {
 }
 
 document.querySelector('.filter-popout').addEventListener('click', btn.onclick);
-document.querySelector('.new-filter-form').addEventListener('click', btn.onclick);
+document.querySelector('.new-filter-form').addEventListener('click', newFilterHandler);
 
