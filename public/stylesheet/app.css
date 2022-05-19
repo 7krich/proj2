@@ -2,6 +2,10 @@
     color: var(--dark-outline);
 }
 
+html {
+  height: 100%;
+}
+
 :root {
     --primary-color: #EDEBE7;
     --secondary-color: #D2D5D2;
@@ -90,6 +94,7 @@ nav ul li button:hover {
     background-color: #979797;
     display: inline-block;
     width: 45%;
+    box-shadow: 5px 5px #888888;
   }
   
   .login-form h4 {
@@ -150,6 +155,7 @@ nav ul li button:hover {
     background-color: #979797;
     width: 45%;
     color: black;
+    box-shadow: 5px 5px #888888;
   }
   
   .signup-form h4 {
@@ -267,7 +273,7 @@ button{
 
 .button-two {
   border-radius: 4px;
-  background-color: var(--red-color);
+  background-color: var(--blue-color); 
   color: black;
   border: none;
   padding: 20px;
@@ -279,6 +285,7 @@ button{
   cursor: pointer;
   font-size:24px;
   margin: 0 0 0 100px;
+  box-shadow: 5px 5px #888888;
 }
 
 
@@ -321,6 +328,7 @@ body {
   font-weight: 100;
   margin: 48px auto;
   width: 75%;
+  box-shadow: 5px 5px #b6b6b6;
   @media screen and (min-width: 480px) {
     width: 75%
   }
@@ -531,4 +539,25 @@ body {
     border-style:solid;
   }
 
-  
+  .homepagequote {
+    font-size: x-large;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .dashboardquote {
+    font-size: x-large;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .singlepostquote {
+    font-size: x-large;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .footer {
+    align-items: center;
+    text-align: center;
+  }
