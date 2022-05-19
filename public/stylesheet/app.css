@@ -2,6 +2,10 @@
     color: var(--dark-outline);
 }
 
+html {
+  height: 100%;
+}
+
 :root {
     --primary-color: #EDEBE7;
     --secondary-color: #D2D5D2;
@@ -40,9 +44,10 @@ nav ul li {
 }
 
 .thebword span {
-  background: rgba(0, 0, 0, .3);
+  background: rgba(0, 0, 0, .5);
+  font-style: italic;
   color: white;
-  border-radius: 20px;
+  border-radius: 5px;
   backdrop-filter: blur(10px);
 }
 
@@ -86,13 +91,14 @@ nav ul li button:hover {
 .login-form {
     padding: 1rem 1.5em;
     border-radius: .5rem;
-    background-color: #74787c;
+    background-color: #979797;
     display: inline-block;
     width: 45%;
+    box-shadow: 5px 5px #888888;
   }
   
   .login-form h4 {
-    color: white;
+    color: #261f2a;
     margin-bottom: 1rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -101,18 +107,18 @@ nav ul li button:hover {
   
   .login-form label {
     text-transform: uppercase;
-    color: #dbdbdb;
+    color: #55425e;
     letter-spacing: 1px;
     font-weight: 600;
     margin-bottom: 1rem;
   }
   
   .login-form input {
-    color: black;
+    color: #332a38;
   }
   
   .login-form input:focus {
-    opacity: .8;
+    opacity: .6;
   }
   
   .email-login,
@@ -146,13 +152,14 @@ nav ul li button:hover {
     padding: 1rem 1.5em;
     display: inline-block;
     border-radius: .5rem;
-    background-color: #b3b8be;
+    background-color: #979797;
     width: 45%;
     color: black;
+    box-shadow: 5px 5px #888888;
   }
   
   .signup-form h4 {
-    color: white;
+    color: #22362f;
     margin-bottom: 1rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -161,7 +168,7 @@ nav ul li button:hover {
   
   .signup-form label {
     text-transform: uppercase;
-    color: #dbdbdb;
+    color: #2d473e;
     letter-spacing: 1px;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -172,7 +179,7 @@ nav ul li button:hover {
   }
   
   .signup-form input:focus {
-    opacity: .8;
+    opacity: .6;
   }
   
   .firstname-signup,
@@ -266,7 +273,7 @@ button{
 
 .button-two {
   border-radius: 4px;
-  background-color: var(--red-color);
+  background-color: var(--blue-color); 
   color: black;
   border: none;
   padding: 20px;
@@ -278,6 +285,7 @@ button{
   cursor: pointer;
   font-size:24px;
   margin: 0 0 0 100px;
+  box-shadow: 5px 5px #888888;
 }
 
 
@@ -320,6 +328,7 @@ body {
   font-weight: 100;
   margin: 48px auto;
   width: 75%;
+  box-shadow: 5px 5px #b6b6b6;
   @media screen and (min-width: 480px) {
     width: 75%
   }
@@ -390,6 +399,7 @@ body {
 .blog-title h1 a {
   color: #333;
   font-weight: 100;
+  text-decoration: underline;
 }
 .blog-summary p {
   color: lighten(#333, 10%);
@@ -505,4 +515,49 @@ body {
   .down-vote-btn img 
   {
     width: 10%;
+  }
+
+  .randomWord {
+    width: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    
+  }
+
+  .word {
+    text-align: center;
+    font-size: large;
+    font-style: italic;
+    font-weight: bolder;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+    background-image: linear-gradient(to right, var(--blue-color), var(--green-color), var(--purple-color), var(--red-color), var(--yellow-color)); 
+    border: #EDEBE7;
+    border-style:solid;
+  }
+
+  .homepagequote {
+    font-size: x-large;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .dashboardquote {
+    font-size: x-large;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .singlepostquote {
+    font-size: x-large;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .footer {
+    align-items: center;
+    text-align: center;
   }
