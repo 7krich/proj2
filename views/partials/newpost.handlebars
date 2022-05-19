@@ -1,27 +1,47 @@
 <!--opens Modal-->
-<button class="newpost" id="newpost">New post</button>
-
-<!-- The Modal -->
-<div id="newpost-popout" class="newpost-popout">
-
-  <!-- Modal content -->
-  <div class="newpost-content">
-    <button class="close">Cancel</button>
-    <section>
-    <h2>Create New Post</h2>
-    <form class="new-post-form">
-        <div>
-            <label for="post-title">Title</label>
-            <input type="text" id="post-title" name="post-title"/>
-        </div>
-        <!--Will need category drop down-->
-        <div>
-            <label for="post-url">Content</label>
-            <input type="text" id="post-content" name="post-content"/>
-        </div>
-        <button type="submit" class="btn">Create</button>
-    </form>
-</section>
+<div class="main">
+  <div class="sub-main">
+    <button class="button-two newpost" id="newpost"><span>New Post!</span></button>
   </div>
 </div>
-<script src="/javascript/add-post.js"></script>
+
+    <!-- The Modal -->
+    <div id="newpost-popout" class="newpost-popout">
+
+      <!-- Modal content -->
+      <div class="newpost-content">
+        <button class="close">Cancel</button>
+        <section>
+          <h2>Create New Post</h2>
+          <button class="button" type="button" data-toggle="example-dropdown">Select a Category</button>
+          <div class="dropdown-pane" id="example-dropdown" data-dropdown data-auto-focus="true">
+            <form>
+              <div class="grid-container">
+                <div class="grid-x grid-margin-x">
+                  <div class="cell medium-6">
+                    <ol class="categories">
+                      <li>
+                        {{#each categories as |category|}}
+                      </li>
+                      {{/each}}
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <form class="new-post-form">
+            <div>
+              <label for="post-title">Title</label>
+              <input type="text" id="post-title" name="post-title" />
+            </div>
+            <div>
+              <label for="post-content">Content</label>
+              <input type="text" id="post-content" name="post-content" />
+            </div>
+            <button type="submit" class="btn">Create</button>
+          </form>
+        </section>
+      </div>
+    </div>
+    <script src="/javascript/add-post.js"></script>
