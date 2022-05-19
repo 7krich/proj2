@@ -249,7 +249,6 @@ nav ul li button:hover {
 button{
   color: black;
   text-align: center;
-  padding: 20px;
 }
 
 .main{
@@ -316,26 +315,28 @@ body {
   font-family: "adelle-sans", sans-serif;
   font-weight: 100;
   margin: 48px auto;
-  width: 20rem;
+  width: 75%;
   @media screen and (min-width: 480px) {
-    width: 28rem;
+    width: 75%
   }
   @media screen and (min-width: 767px) {
-    width: 40rem;
+    width: 75%
   }
   @media screen and (min-width: 959px) {
-    width: 50rem;
+    width: 75%
   }
 }
+
 .blog-container a {
   color: #4d4dff;
   text-decoration: none;
   transition: .25s ease;
-  &:hover {
+}
+
+.blog-container a:hover {
     border-color: #ff4d4d;
     color: #ff4d4d;
   }
-}
 
 
 .blog-cover {
@@ -461,8 +462,7 @@ body {
   top: -0.5rem;
 }
 
-// Icons
-//-------------------------
+
 .icon-star,
 .icon-bubble {
   fill: lighten(#333, 40%);
@@ -470,7 +470,35 @@ body {
   margin-right: .5rem;
   transition: .25s ease;
   width: 24px;
-  &:hover {
+}
+  
+  .icon-star,
+  .icon-bubble :hover {
     fill: #ff4d4d;
   }
+
+  .postwidth {
+    display: flex;
+   
+    justify-content: center;
+  }
+
+
+.votingbuttons {
+  display: flex;
 }
+
+.positive
+.negative {
+  display: inline-block;
+}
+
+  .up-vote-btn img 
+  {
+    width: 10%;
+  }
+
+  .down-vote-btn img 
+  {
+    width: 10%;
+  }

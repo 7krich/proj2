@@ -18,18 +18,20 @@
   </div>
   <div class="blog-footer">
     <ul>
-      <li class="published-date">12 days ago</li>
+      <li class="published-date"></li>
+      <div class="votingbuttons">
       <li class="positive">
-        <button class="up-vote-btn" id="up-vote-btn"><svg class="icon-bubble">
-            <use xlink:href="#icon-bubble"></use>
-          </svg><span class="numero">{{vote_count}}</span></button>
+        <span>
+        <button class="up-vote-btn" id="up-vote-btn"><img src="/stylesheet/assets/thumbsup.png"><class="numero">{{vote_count}}</span></button>
+        </span>
       </li>
       <li class="negative">
+        <span>
          <button class="down-vote-btn" id="down-vote-btn">
-           <svg class="icon-star">
-            <use xlink:href="#icon-star"></use>
-          </svg><span class="numero">3</span></button>
+           <img src="/stylesheet/assets/thumbsdown.png"><class="numero">3</span></button>
+        </span>
           </li>
+      </div>
     </ul>
   </div>
 
