@@ -7,11 +7,6 @@ const { Post, User, Comment } = require('../models');
 // GET dashboard page
 router.get('/', withAuth, (req, res) => {
     Post.findAll({
-      where: {
-        // only show posts on user dashboard that have been created by the user
-        // use the ID from the session
-        user_id: req.session.user_id
-      },
       attributes: [
         'id',
         'post_content',
