@@ -1,6 +1,7 @@
 
 {{> posts post}}
 
+hjk
 {{#if loggedIn}}
 <form class="comment-form">
     <div>
@@ -11,8 +12,9 @@
         <button type="submit">Add Comment</button>
     </div>
 </form>
-<button type="button" class="upvote-btn">upvote</button>
-<button type="button" class="downvote-btn">downvote</button>
+<button type="button" class="upvote-btn"><i class="fa-solid fa-thumbs-up"></i></button>
+|
+<button type="button" class="downvote-btn"><i class="fa-solid fa-thumbs-down"></i></button>
 {{/if}}
 
 {{> comments post.comments}}
