@@ -390,6 +390,7 @@ body {
 .blog-title h1 a {
   color: #333;
   font-weight: 100;
+  text-decoration: underline;
 }
 .blog-summary p {
   color: lighten(#333, 10%);
