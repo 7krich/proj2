@@ -35,6 +35,17 @@ nav ul li {
   background-position: bottom;
 }
 
+.thebword {
+  text-align: center;
+}
+
+.thebword span {
+  background: rgba(0, 0, 0, .3);
+  color: white;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
 #signup-form {
     padding: 10px 15px;
     font-weight: lighter;
