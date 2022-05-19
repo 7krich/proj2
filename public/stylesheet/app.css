@@ -40,9 +40,10 @@ nav ul li {
 }
 
 .thebword span {
-  background: rgba(0, 0, 0, .3);
+  background: rgba(0, 0, 0, .5);
+  font-style: italic;
   color: white;
-  border-radius: 20px;
+  border-radius: 5px;
   backdrop-filter: blur(10px);
 }
 
@@ -86,13 +87,13 @@ nav ul li button:hover {
 .login-form {
     padding: 1rem 1.5em;
     border-radius: .5rem;
-    background-color: #74787c;
+    background-color: #979797;
     display: inline-block;
     width: 45%;
   }
   
   .login-form h4 {
-    color: white;
+    color: #261f2a;
     margin-bottom: 1rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -101,18 +102,18 @@ nav ul li button:hover {
   
   .login-form label {
     text-transform: uppercase;
-    color: #dbdbdb;
+    color: #55425e;
     letter-spacing: 1px;
     font-weight: 600;
     margin-bottom: 1rem;
   }
   
   .login-form input {
-    color: black;
+    color: #332a38;
   }
   
   .login-form input:focus {
-    opacity: .8;
+    opacity: .6;
   }
   
   .email-login,
@@ -146,13 +147,13 @@ nav ul li button:hover {
     padding: 1rem 1.5em;
     display: inline-block;
     border-radius: .5rem;
-    background-color: #b3b8be;
+    background-color: #979797;
     width: 45%;
     color: black;
   }
   
   .signup-form h4 {
-    color: white;
+    color: #22362f;
     margin-bottom: 1rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -161,7 +162,7 @@ nav ul li button:hover {
   
   .signup-form label {
     text-transform: uppercase;
-    color: #dbdbdb;
+    color: #2d473e;
     letter-spacing: 1px;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -172,7 +173,7 @@ nav ul li button:hover {
   }
   
   .signup-form input:focus {
-    opacity: .8;
+    opacity: .6;
   }
   
   .firstname-signup,
@@ -507,3 +508,27 @@ body {
   {
     width: 10%;
   }
+
+  .randomWord {
+    width: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+    border-radius: 5px;
+    backdrop-filter: blur(10px);
+    
+  }
+
+  .word {
+    text-align: center;
+    font-size: large;
+    font-style: italic;
+    font-weight: bolder;
+    color: black;
+    padding: 10px;
+    margin: 10px;
+    background-image: linear-gradient(to right, var(--blue-color), var(--green-color), var(--purple-color), var(--red-color), var(--yellow-color)); 
+    border: #EDEBE7;
+    border-style:solid;
+  }
+
+  
