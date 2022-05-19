@@ -13,6 +13,7 @@ router.get('/', (req, res) => {
         'id',
         'post_content',
         'title',
+        'category_id',
         'created_at',
         [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
         ],
@@ -54,9 +55,11 @@ router.get('/:id', (req, res) => {
         where: {
             id: req.params.id
         },
-        attributes: ['id',
+        attributes: [
+            'id',
             'post_content',
             'title',
+            'category_id',
             'created_at',
             [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
         ],
@@ -82,10 +85,13 @@ router.get('/:id', (req, res) => {
             {
                 model: Category,
                 attributes: ['id', 'category_name']
+<<<<<<< HEAD
             },
             {
                 model: PostCategory,
                 attributes: ['id', 'post_id', 'category_id']
+=======
+>>>>>>> develop
             }
         ]
     })

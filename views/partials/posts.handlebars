@@ -1,18 +1,19 @@
-<article class="post">
-    <div class="title">
-        <a href="{{post_url}}" target="_blank">{{title}}</a>
-        <span>{{post_url}}</span>
+<div class="row" id="content">
+  <div class="medium-8 columns">
+    <div class="blog-post">
+      <a href="{{post_url}}" target="_blank">{{title}}</a>
+      <span>{{post_url}}</span>
+      <img class="thumbnail" src="https://placehold.it/850x350">
+      <p>{{post_url}}</p>>
+      <div class="callout">
+        <ul class="menu simple">
+          <li>{{vote_count}} point(s) by {{user.name}} on
+            {{created_at}}</li>
+          <li><a href="/post/{{id}}">{{comments.length}} comment(s)</a></li>
+          <li><button type="submit" id="up-vote-btn"></button></li>
+          <li><button type="submit" id="down-vote-btn"></button></li>
+        </ul>
+      </div>
     </div>
-    <div class="meta">
-        {{vote_count}} point(s) by {{user.name}} on
-        {{created_at}}
-        |
-        <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
-    </div>
-    <div>
-        <button type="submit" id="up-vote-btn"></button>
-    </div>
-    <div>
-        <button type="submit" id="down-vote-btn"></button>
-    </div>
-</article>
+  </div>
+</div>

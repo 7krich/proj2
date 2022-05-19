@@ -1,0 +1,41 @@
+<ol class="posts">
+    {{#each posts as |post|}}
+    <li>
+        {{> posts post}}
+    </li>
+    {{/each}}
+</ol>
+
+{{> newpost}}
+
+<ul class="filters">
+    <li>Transgender
+        <ul>
+            <li>FTM</li>
+            <li>MTF</li>
+            <li>Non-Binary</li>
+            <li>Coming Out</li>
+            <li>Gender Expression</li>
+            <li>Hormone Replacement Therapy</li>
+            <li>Surgeries</li>
+        </ul>
+    </li>
+    <li>Sexuality</li>
+        <ul>
+            <li>Asexual</li>
+            <li>Bisexual</li>
+            <li>Coming Out</li>
+            <li>Gay</li>
+            <li>Lesbian</li>
+            <li>Pansexual</li>
+            <li>Questioning</li>
+        </ul>
+    <li>Society</li>
+        <ul>
+            <li>LGBT Adoption</li>
+            <li>LGBT Parenting</li>
+            <li>Same-Sex Marriage</li>
+            <li>Social Movements</li>
+            <li>Events</li>
+        </ul>
+</ul>

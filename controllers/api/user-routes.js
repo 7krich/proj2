@@ -34,6 +34,7 @@ router.get('/:id', (req, res) => {
                     'id',
                     'title',
                     'post_content',
+                    'category_id',
                     'created_at'
                 ]
             },
@@ -56,7 +57,7 @@ router.get('/:id', (req, res) => {
     .then(dbUserData => {
         // if no users with that id are found
         if(!dbUserData) {
-            //let user know response was recieved but no users were found
+            //let user know response was received but no users were found
             res.status(404).json({ message: 'No users found.' });
             return;
         }
@@ -115,7 +116,7 @@ router.post('/login', (req, res) => {
         const validPassword = dbUserData.checkPassword(req.body.password);
         // if match returns false
         if(!validPassword) {
-            res.status(400).json({ mesage: 'Incorrect password!' });
+            res.status(400).json({ message: 'Incorrect password!' });
             return;
         }
 
@@ -123,8 +124,6 @@ router.post('/login', (req, res) => {
             // declare session variables
             req.session.user_id = dbUserData.id;
             req.session.username = dbUserData.username;
-            res.session.first_name = dbUserData.first_name;
-            res.session.last_name = dbUserData.last_name;
             req.session.loggedIn = true;
         
         res.json({ user: dbUserData, message: 'You are now logged in!' });
@@ -146,25 +145,25 @@ router.post('/logout', (req, res) => {
 
 router.put('/:id', (req, res) => {
     // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
-  
+
     // pass in req.body instead to only update what's passed through
     User.update(req.body, {
-      individualHooks: true,
-      where: {
-        id: req.params.id
-      }
+        individualHooks: true,
+        where: {
+            id: req.params.id
+        }
     })
-      .then(dbUserData => {
+    .then(dbUserData => {
         if (!dbUserData) {
-          res.status(404).json({ message: 'No user found with this id' });
-          return;
+            res.status(404).json({ message: 'No user found with this id' });
+            return;
         }
         res.json(dbUserData);
-      })
-      .catch(err => {
+    })
+    .catch(err => {
         console.log(err);
         res.status(500).json(err);
-      });
+    });
 });
 
 // DELETE (non-MVP)

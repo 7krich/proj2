@@ -1,77 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The B Word</title>
-    <!--<link rel="stylesheet" href="/public/src/assets/foundation.css">-->
     <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-    <link rel="stylesheet" href="/public/src/assets/app.css">
+    <link rel="stylesheet" href="/stylesheet/app.css">
 </head>
 
 <!--Nav placeholder for pull request-->
-<body>
-    <div class="wrapper">
-        <header>
-            <nav>
-                <div class="to-right">
-                    <ul class="page">
-                {{#if loggedIn}}
-                <li>
-                <button id="logout" class="logout-button">Logout</button>
-                </li>
-                {{else}}
-                <li>
-                    <button class="signup" id="signup-form">Sign Up</button>
-                </li>
-                <li>
-                    <button class="login" id="login-form">Login</button>
-                </li>
-                {{/if}}
-                    </ul>
-                </div>
-            </nav>
-            <h1>
-                <a href="/">The B Word</a>
-            </h1>
-        </header>
-        <main>
-            <nav>
-                <form class="signup" id="signup">
-                    <div class="signup-form">
-                        <h1>Sign Up</h1>
-                        <p>Please fill out the form below to create an account.</p>
-                        <br>
-                        <label for="email-signup">Email:</label>
-                        <input type="email" placeholder="Enter Email" name="email" id="email-signup" required>
-                        <label for="password-signup">Password:</label>
-                        <input type="password" placeholder="Enter Password" name="pswrd" id="password-signup" required>
-                        <label for="firstname-signup">First Name:</label>
-                        <input type="text" placeholder="Enter First Name" name="firstname" id="firstname-signup" required>
-                        <label for="lastname-signup">Last Name:</label>
-                        <input type="text" placeholder="Enter Last Name" name="lastname" id="lastname-signup" required>
-                        <label for="username-signup">Username:</label>
-                        <input type="text" placeholder="Enter Username" name="username" id="username-signup" required>
-                        <a href="/login">Sign Up!</a>
-                    </div>
-                </form>
-            </nav>
+<div class="top-bar">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li class="menu-text">LGBTQ+ Resources</li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+        {{#if loggedIn}}
+          <li> <button id="logout" class="logout-button">Logout</button></li>
+        {{else}}
+          <li> <button class="signup" id="signup-form">Sign Up</button></li>
+          <li><button class="login" id="login-form">Login</button></li>
+        {{/if}}
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout large primary">
+      <div class="row column text-center">
+        <h1>The B Word</h1>
+      </div>
+    </div>
+<main>
+
+            {{{ body }}}
 
         </main>
+
         <footer>
 
         </footer>
+
     </div>
     {{#if loggedIn}}
     <script src="/javascript/logout.js"></script>
-    {{/if}}
-  <!--  <script src="/public/js/vendor/jquery.js"></script>
-    <script src="/public/js/vendor/what-input.js"></script>
-    <script src="/public/js/vendor/foundation.js"></script>
-    <script src="/server.js"></script>    -->   
 
-    </body>
+    {{/if}} 
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
 </body>
-<script src="/javascript/login.js"></script>
 </html>
