@@ -5806,7 +5806,7 @@ screen and (max-width:63.99875em) {
 }
 
 .callout.primary {
-    background-color: #d7ecfa;
+    /* background-color: #d7ecfa; */
     color: #0a0a0a
 }
 

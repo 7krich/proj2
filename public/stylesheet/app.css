@@ -30,6 +30,11 @@ nav ul li {
     color: var(--secondary-color);
 }
 
+.callout, .large, .primary{
+  background-image: url('../stylesheet/assets/00_pride_header.webp');
+  background-position: bottom;
+}
+
 #signup-form {
     padding: 10px 15px;
     font-weight: lighter;
