@@ -1,0 +1,27 @@
+<!--opens Modal-->
+<button class="newpost" id="newpost">New post</button>
+
+<!-- The Modal -->
+<div id="newpost-popout" class="newpost-popout">
+
+  <!-- Modal content -->
+  <div class="newpost-content">
+    <button class="close">Cancel</button>
+    <section>
+    <h2>Create New Post</h2>
+     <form class="new-post-form">
+        <div>
+            <label for="post-title">Title</label>
+            <input type="text" id="post-title" name="post-title"/>
+        </div>
+        <!--Will need category drop down-->
+        <div>
+            <label for="post-url">Content</label>
+            <input type="text" id="post-content" name="post-content"/>
+        </div>
+        <button type="submit" class="btn">Create</button>
+    </form>
+</section>
+  </div>
+</div>
+<script src="/javascript/add-post.js"></script>
