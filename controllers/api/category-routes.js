@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const withAuth = require('../../utils/auth');
-const { Category, Post, User } = require('../../models');
+const { Category, Post, Comment, User } = require('../../models');
 
 // get all categories
 router.get('/', (req, res) => {
@@ -76,5 +76,4 @@ router.post("/", (req, res) => {
     });
 });
 
-// POST create category (non-MVP)
 module.exports = router;

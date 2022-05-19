@@ -14,8 +14,9 @@ class Post extends Model {
                 },
                 attributes: [
                     'id',
-                    'post_content',
                     'title',
+                    'post_content',
+                    'category_id',
                     'created_at',
                     [
                         sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id & vote.up_vote = true)'), 'upvote_count'
@@ -32,6 +33,10 @@ class Post extends Model {
                 model: models.User,
                 attributes: ['username']
             }
+            },
+            {
+            model: models.Category,
+            attributes: ['id', 'category_name']
             }
         ]
         });
@@ -66,6 +71,14 @@ Post.init(
                 key: 'id'
             }
         },
+        category_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'category',
+                key: 'id'
+            }
+        }
+        // i feel like this needs to be a thing, but it was breaking things. 
         // comment_id: {
         //     type: DataTypes.INTEGER,
         //     references: {
