@@ -2,7 +2,7 @@
 {{> posts post}}
 
 hjk
-{{#if loggedIn}}
+{{!-- {{#if loggedIn}} --}}
 <form class="comment-form">
     <div>
         <textarea name="comment-body"></textarea>
@@ -15,11 +15,11 @@ hjk
 <button type="button" class="upvote-btn"><i class="fa-solid fa-thumbs-up"></i></button>
 |
 <button type="button" class="downvote-btn"><i class="fa-solid fa-thumbs-down"></i></button>
-{{/if}}
+{{!-- {{/if}} --}}
 
 {{> comments post.comments}}
 
-{{#if loggedIn}}
+{{!-- {{#if loggedIn}} --}}
 <script src="/javascript/comment.js"></script>
 <script src="/javascript/vote.js"></script>
-{{/if}}
+{{!-- {{/if}} --}}
