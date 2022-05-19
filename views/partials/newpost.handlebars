@@ -9,18 +9,23 @@
     <button class="close">Cancel</button>
     <section>
       <h2>Create New Post</h2>
-       <button class="button" type="button" data-toggle="example-dropdown">Select a Category</button>
-        <div class="dropdown-pane" id="example-dropdown" data-dropdown data-auto-focus="true">
-          <form>
-            <div class="grid-container">
-              <div class="grid-x grid-margin-x">
-                <div class="cell medium-6">
-                  {{category}}
-                </div>
+      <button class="button" type="button" data-toggle="example-dropdown">Select a Category</button>
+      <div class="dropdown-pane" id="example-dropdown" data-dropdown data-auto-focus="true">
+        <form>
+          <div class="grid-container">
+            <div class="grid-x grid-margin-x">
+              <div class="cell medium-6">
+                <ol class="categories">
+                  <li>
+                    {{#each categories as |category|}}
+                  </li>
+                  {{/each}}
+                </ol>
               </div>
             </div>
-          </form>
-        </div>
+          </div>
+        </form>
+      </div>
       <form class="new-post-form">
         <div>
           <label for="post-title">Title</label>
