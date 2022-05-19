@@ -1,0 +1,465 @@
+* {
+    color: var(--dark-outline);
+}
+
+:root {
+    --primary-color: #EDEBE7;
+    --secondary-color: #D2D5D2;
+    --tierary-color: #B7BCBA;
+    --dark-outline: #7F8386;
+    --red-color: #FFB8B8;
+    --yellow-color: #FFFBD0;
+    --green-color: #C8FDC3;
+    --blue-color: #97F2D0;
+    --purple-color: #E6B2FD;
+}
+
+/*Nav CSS*/
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: right;
+    list-style: none;
+}
+
+nav ul li {
+    padding: 10px 20px;
+    font-weight: heavy;
+    font-size: xx-large;
+    border: none;
+    color: var(--secondary-color);
+}
+
+.callout, .large, .primary{
+  background-image: url('../stylesheet/assets/00_pride_header.webp');
+  background-position: bottom;
+}
+
+#signup-form {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55vw;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    border: none;
+    border-radius: 25px;
+    color: #5c765a;
+    background-color: var(--green-color);
+}
+
+#login-form {
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55vw;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    border: none;
+    border-radius: 25px;
+    color: #664d71;
+    background-color: var(--purple-color);
+}
+
+nav ul li button:hover {
+    font-style: italic;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.login-options {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.login-form {
+    padding: 1rem 1.5em;
+    border-radius: .5rem;
+    background-color: #74787c;
+    display: inline-block;
+    width: 45%;
+  }
+  
+  .login-form h4 {
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .login-form label {
+    text-transform: uppercase;
+    color: #dbdbdb;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .login-form input {
+    color: black;
+  }
+  
+  .login-form input:focus {
+    opacity: .8;
+  }
+  
+  .email-login,
+  .password-login {
+    border-radius: 30px;
+    border: none;
+    opacity: .1;
+    transition: all ease .4s;
+  }
+  
+  .login-form-button {
+    border-radius: 30px;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: #836690;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    padding: 1rem;
+    transition: all ease .4s;
+  }
+  
+  .login-form-button:hover {
+    background-color: #44c8ed;
+    border-color: #44c8ed;
+  }
+
+
+
+  .signup-form {
+    padding: 1rem 1.5em;
+    display: inline-block;
+    border-radius: .5rem;
+    background-color: #b3b8be;
+    width: 45%;
+    color: black;
+  }
+  
+  .signup-form h4 {
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .signup-form label {
+    text-transform: uppercase;
+    color: #dbdbdb;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .signup-form input {
+    color: black;
+  }
+  
+  .signup-form input:focus {
+    opacity: .8;
+  }
+  
+  .firstname-signup,
+  .lastname-signup,
+  .username-signup,
+  .email-signup,
+  .password-signup {
+    border-radius: 30px;
+    border: none;
+    opacity: .1;
+    transition: all ease .4s;
+  }
+  
+  .signup-form-button {
+    border-radius: 30px;
+    border: 1px solid #fff;
+    color: #fff;
+    background-color: #5a947f;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    padding: 1rem;
+    transition: all ease .4s;
+  }
+  
+  .login-form-button:hover {
+    background-color: #44c8ed;
+    border-color: #44c8ed;
+  }
+    
+  /* The Modal (background) */
+.newpost-popout {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+  
+  /* Modal Content/Box */
+  .newpost-content{
+    background-color: #bbbbbb;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+
+  .post-content {
+    height: 50px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+button{
+  color: black;
+  text-align: center;
+  padding: 20px;
+}
+
+.main{
+  width: 100%;
+}
+
+.sub-main{
+  width: 30%;
+  margin:22px;
+  float: left;
+}
+
+
+.button-two {
+  border-radius: 4px;
+  background-color: var(--red-color);
+  color: black;
+  border: none;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  text-align: center;
+  cursor: pointer;
+  font-size:24px;
+  margin: 0 0 0 100px;
+}
+
+
+.button-two span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-two span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button-two:hover span {
+  padding-right: 25px;
+}
+
+.button-two:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+body {
+  background: #e5ded8;
+  box-sizing: border-box;
+}
+
+
+.blog-container {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: hsla(0, 0, 0, .2) 0 4px 2px -2px;
+  font-family: "adelle-sans", sans-serif;
+  font-weight: 100;
+  margin: 48px auto;
+  width: 20rem;
+  @media screen and (min-width: 480px) {
+    width: 28rem;
+  }
+  @media screen and (min-width: 767px) {
+    width: 40rem;
+  }
+  @media screen and (min-width: 959px) {
+    width: 50rem;
+  }
+}
+.blog-container a {
+  color: #4d4dff;
+  text-decoration: none;
+  transition: .25s ease;
+  &:hover {
+    border-color: #ff4d4d;
+    color: #ff4d4d;
+  }
+}
+
+
+.blog-cover {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/17779/yosemite-3.jpg");
+  background-size: cover;
+  border-radius: 5px 5px 0 0;
+  height: 15rem;
+  box-shadow: inset hsla(0, 0, 0, .2) 0 64px 64px 16px;
+}
+.blog-author,
+.blog-author--no-cover {
+  margin: 0 auto;
+  padding-top: .125rem;
+  width: 80%;
+}
+.blog-author h3::before,
+.blog-author--no-cover h3::before {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/17779/russ.jpeg");
+  background-size: cover;
+  border-radius: 50%;
+  content: " ";
+  display: inline-block;
+  height: 32px;
+  margin-right: .5rem;
+  position: relative;
+  top: 8px;
+  width: 32px;
+}
+.blog-author h3 {
+  color: #fff;
+  font-weight: 100;
+}
+.blog-author--no-cover h3 {
+  color: lighten(#333, 40%);
+  font-weight: 100;
+}
+
+
+.blog-body {
+  margin: 0 auto;
+  width: 80%;
+}
+.video-body {
+  height: 100%;
+  width: 100%;
+}
+.blog-title h1 a {
+  color: #333;
+  font-weight: 100;
+}
+.blog-summary p {
+  color: lighten(#333, 10%);
+}
+.blog-tags ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-left: 0;
+}
+.blog-tags li + li {
+  margin-left: .5rem;
+}
+.blog-tags a {
+  border: 1px solid lighten(#333, 40%);
+  border-radius: 3px;
+  color: lighten(#333, 40%);
+  font-size: .75rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+  padding: 0 .5rem;
+  text-align: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+  width: 5rem;
+}
+
+
+.blog-footer {
+  border-top: 1px solid lighten(#333, 70%);
+  margin: 0 auto;
+  padding-bottom: .125rem;
+  width: 80%;
+}
+.blog-footer ul {
+  list-style: none;
+  display: flex;
+  flex: row wrap;
+  justify-content: flex-end;
+  padding-left: 0;
+}
+.blog-footer li:first-child {
+  margin-right: auto;
+}
+.blog-footer li + li {
+  margin-left: .5rem;
+}
+.blog-footer li {
+  color: lighten(#333, 40%);
+  font-size: .75rem;
+  height: 1.5rem;
+  letter-spacing: 1px;
+  line-height: 1.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  white-space: nowrap;
+  & a {
+    color: lighten(#333, 40%);
+  }
+}
+.comments {
+  margin-right: 1rem;
+}
+.published-date {
+  border: 1px solid lighten(#333, 40%);
+  border-radius: 3px;
+  padding: 0 .5rem;
+}
+.numero {
+  position: relative;
+  top: -0.5rem;
+}
+
+// Icons
+//-------------------------
+.icon-star,
+.icon-bubble {
+  fill: lighten(#333, 40%);
+  height:24px;
+  margin-right: .5rem;
+  transition: .25s ease;
+  width: 24px;
+  &:hover {
+    fill: #ff4d4d;
+  }
+}
