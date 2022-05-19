@@ -1,3 +1,7 @@
+
+{{> newpost}}
+{{> filtermodal}}
+
 <ol class="posts">
     {{#each posts as |post|}}
     <li>
@@ -6,8 +10,6 @@
     {{/each}}
 </ol>
 
-{{> newpost}}
-{{> filtermodal}}
 
 <div class="dropdown">
     <button onclick="myFunction()" class="dropbtn">Filter</button>

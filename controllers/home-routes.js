@@ -39,6 +39,22 @@ router.get('/', (req, res) => {
     });
 });
 
+router.get('/post/:id', (req, res) => {
+    const post = {
+      id: 1,
+      title: 'Title',
+      post_content: 1,
+      created_at: 1,
+      vote_count: 10,
+      comments: [{}, {}],
+      user: {
+        username: 'test_user'
+      }
+    };
+  
+    res.render('single-post', { post });
+  });
+
 router.get('/login', (req, res) => {
     // redirect home if no one exists upon login
     if (req.session.loggedIn) {
