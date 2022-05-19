@@ -123,11 +123,11 @@ router.put('/vote', withAuth, (req, res) => {
     // upvotes should only work if someone is logged in
     if (req.session) {
       // pass session id along with all destructured properties on req.body
-      Post.vote({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
+        Post.vote({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
         .then(updatedVoteData => res.json(updatedVoteData))
         .catch(err => {
-          console.log(err);
-          res.status(500).json(err);
+            console.log(err);
+            res.status(400).json(err);
         });
     }
 });
