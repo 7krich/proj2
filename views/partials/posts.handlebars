@@ -5,9 +5,8 @@
       <span>{{post_content}}</span>
       <div class="callout">
         <ul class="menu simple">
-          <li>{{vote_count}} point(s) by {{user.name}} on
-            {{created_at}}</li>
-          <li><a href="/post/{{id}}">{{comments.length}} comment(s)</a></li>
+          <li>{{vote_count}} point(s) by {{user.name}} on {{created_at}}</li>
+          <li><a href="/post/:{{id}}">{{comments.length}} comment(s)</a></li>
           <li><button type="submit" id="up-vote-btn">Up</button></li>
           <li><button type="submit" id="down-vote-btn">Down</button></li>
         </ul>
