@@ -14,6 +14,7 @@
 <div class="top-bar">
       <div class="top-bar-left">
         <ul class="menu">
+          <li><img width="50px" height="50px" src="/stylesheet/assets/Brainz2.png"></li>
           <li class="menu-text">LGBTQ+ Resources</li>
         </ul>
       </div>
@@ -31,18 +32,20 @@
 
     <div class="callout large primary">
       <div class="row column text-center">
-        <h1>The B Word</h1>
+        <h1 class="thebword"><span>The B Word</span></h1>
       </div>
     </div>
+    <div class="word" id="word"><span class="randomWord" id="randomWord"></span></div>
 <main>
 
             {{{ body }}}
 
         </main>
 
-        <footer>
-
-        </footer>
+<footer>
+       <div class="footer">&copy; 2022 Alex Wiles, Rachel Gray, Jeremy Jakobsons, Kyle Richnafsky, Evan Kuck
+      </div>
+</footer>
 
     </div>
     {{#if loggedIn}}
@@ -51,6 +54,7 @@
     {{/if}} 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script src="/javascript/randomwords.js"></script>
     <script>
       $(document).foundation();
     </script>
