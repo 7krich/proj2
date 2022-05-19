@@ -3,25 +3,24 @@ async function upVoteHandler(event) {
     
     console.log("hello");
 
-    // const id = 1;
-    // window.location.toString().split('/') [
-    //     window.location.toString().split('/').length - 1
-    // ];
+    const id = window.location.toString().split('/') [
+        window.location.toString().split('/').length - 1
+    ];
 
-    // const response = await fetch('/api/posts/vote', {
-    //     method: 'PUT',
-    //     body: JSON.stringify({
-    //         post_id: id
-    //     }),
-    //     headers: { "Content-Type": "application/json" }
-    // });
+    const response = await fetch('/api/posts/vote', {
+        method: 'PUT',
+        body: JSON.stringify({
+            post_id: id
+        }),
+        headers: { "Content-Type": "application/json" }
+    });
 
-    // if(response.ok) {
-    //     document.location.reload();
-    // }
-    // else {
-    //     alert(response.statusText);
-    // }
+    if(response.ok) {
+        document.location.reload();
+    }
+    else {
+        alert(response.statusText);
+    }
 }
 
 async function downVoteHandler(event) {
@@ -35,21 +34,21 @@ async function downVoteHandler(event) {
     //     window.location.toString().split('/').length - 1
     // ];
 
-    // const response = await fetch('/api/posts/vote', {
-    //     method: 'PUT',
-    //     body: JSON.stringify({
-    //         post_id: id
-    //     }),
-    //     headers: { "Content-Type": "application/json" }
-    // });
+    const response = await fetch('/api/posts/vote', {
+        method: 'PUT',
+        body: JSON.stringify({
+            post_id: id
+        }),
+        headers: { "Content-Type": "application/json" }
+    });
 
-    // if(response.ok) {
-    //     document.location.reload();
-    // }
-    // else {
-    //     alert(response.statusText);
-    // }
+    if(response.ok) {
+        document.location.reload();
+    }
+    else {
+        alert(response.statusText);
+    }
 }
 
-document.querySelector('.upvote-btn').addEventListener('click', upVoteHandler);
-document.querySelector('.downvote-btn').addEventListener('click', downVoteHandler);
+document.querySelector('.up-vote-btn').addEventListener('click', upVoteHandler);
+document.querySelector('.down-vote-btn').addEventListener('click', downVoteHandler);
