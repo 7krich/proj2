@@ -1,6 +1,7 @@
 
-{{> post-info post}}
+{{> posts post}}
 
+hjk
 {{#if loggedIn}}
 <form class="comment-form">
     <div>
@@ -9,13 +10,16 @@
 
     <div>
         <button type="submit">Add Comment</button>
-        <button type="button" class="upvote-btn">upvote</button>
-        <button type="button" class="downvote-btn">downvote</button>
     </div>
 </form>
+<button type="button" class="upvote-btn"><i class="fa-solid fa-thumbs-up"></i></button>
+|
+<button type="button" class="downvote-btn"><i class="fa-solid fa-thumbs-down"></i></button>
 {{/if}}
 
 {{> comments post.comments}}
+
+<div class="singlepostquote">“Equality means more than passing laws. The struggle is really won in the hearts and minds of the community, where it really counts.” – Barbara Gittings</div>
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
