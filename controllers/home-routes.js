@@ -42,7 +42,7 @@ router.get('/', (req, res) => {
 router.get('/login', (req, res) => {
     // redirect home if no one exists upon login
     if (req.session.loggedIn) {
-        res.redirect('/dashboard');
+        res.redirect('/');
         return;
     }
     res.render('/');

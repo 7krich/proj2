@@ -1,3 +1,17 @@
+ var modal = document.getElementById("newpost-popout");
+ var btn = document.getElementById("newpost");
+ var cancel = document.getElementsByClassName("close")[0];
+
+ btn.onclick = function() {
+   modal.style.display = "block";
+   console.log(btn);
+ }
+
+ cancel.onclick = function() {
+   modal.style.display = "none";
+   console.log('orhere')
+}
+
 async function newPostHandler(event) {
     event.preventDefault();
 
@@ -21,4 +35,5 @@ async function newPostHandler(event) {
     }
 }
 
+document.querySelector('.newpost').addEventListener('click', btn.onclick);
 document.querySelector('.new-post-form').addEventListener('submit', newPostHandler);
