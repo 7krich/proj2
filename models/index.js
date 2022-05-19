@@ -2,11 +2,7 @@ const User = require('./User');
 const Post = require('./Post');
 const Vote = require('./Vote'); 
 const Comment = require('./Comment');
-<<<<<<< HEAD
-const Category = require('./Category');
-=======
 const Category = require("./Category");
->>>>>>> develop
 
 // create associations 
 // linking the user id to the post - one user can have many posts: hasMany

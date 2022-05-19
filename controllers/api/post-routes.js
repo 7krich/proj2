@@ -85,13 +85,6 @@ router.get('/:id', (req, res) => {
             {
                 model: Category,
                 attributes: ['id', 'category_name']
-<<<<<<< HEAD
-            },
-            {
-                model: PostCategory,
-                attributes: ['id', 'post_id', 'category_id']
-=======
->>>>>>> develop
             }
         ]
     })
