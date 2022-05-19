@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const sequelize = require('../../config/connection');
 const withAuth = require('../../utils/auth');
-const { Post, User, Vote, Comment } = require('../../models');
+const { Post, User, Vote, Comment, Category } = require('../../models');
 
 // get all posts
 router.get('/', (req, res) => {
@@ -35,6 +35,10 @@ router.get('/', (req, res) => {
             {
                 model: User,
                 attributes: ['username']
+            },
+            {
+                model: Category,
+                attributes: ['id', 'category_name']
             }
         ]
     })
@@ -51,7 +55,8 @@ router.get('/:id', (req, res) => {
         where: {
             id: req.params.id
         },
-        attributes: ['id',
+        attributes: [
+            'id',
             'post_content',
             'title',
             'category_id',
@@ -76,6 +81,10 @@ router.get('/:id', (req, res) => {
             {
                 model: User,
                 attributes: ['username']
+            },
+            {
+                model: Category,
+                attributes: ['id', 'category_name']
             }
         ]
     })
@@ -98,8 +107,7 @@ router.post('/', withAuth, (req, res) => {
     Post.create({
         title: req.body.title,
         post_content: req.body.post_content,
-        user_id: req.session.user_id,
-        anonymous: req.session.anonymous
+        user_id: req.session.user_id
     })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
