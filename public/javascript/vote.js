@@ -65,7 +65,6 @@ function updateDownVoteDisplay(){
 
 //     console.log("hello");
 
-//     count ++;
 //     const id = 1;
 //     // window.location.toString().split('/') [
 //     //     window.location.toString().split('/').length - 1
