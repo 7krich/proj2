@@ -2,7 +2,7 @@
 {{> posts post}}
 
 
-{{!-- {{#if loggedIn}} --}}
+{{#if loggedIn}}
 <article class="singlepost">
 <form class="comment-form">
   <div class="comment-text">
@@ -16,12 +16,14 @@
     </div>
   </div>
 </form>
+{{/if}}
 
 {{> comments post.comments}}
 <br><br>
 <div class="singlepostquote">“Equality means more than passing laws. The struggle is really won in the hearts and minds of the community, where it really counts.” – Barbara Gittings</div>
 <br>
-{{!-- {{#if loggedIn}} --}}
+
+{{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
 <script src="/javascript/vote.js"></script>
-{{!-- {{/if}} --}}
+{{/if}}
