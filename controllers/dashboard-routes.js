@@ -6,6 +6,8 @@ const { Post, User, Comment } = require('../models');
 
 // GET dashboard page
 router.get('/', withAuth, (req, res) => {
+  console.log(req.query);
+
     Post.findAll({
       attributes: [
         'id',
