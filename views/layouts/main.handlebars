@@ -14,12 +14,14 @@
 <div class="top-bar">
       <div class="top-bar-left">
         <ul class="menu">
-          <li class="menu-text">LGBTQ+ Resources</li>
+          <li><img width="50px" height="50px" src="/stylesheet/assets/Brainz2.png"></li>
+          <li><a href="/dashboard" class="menu-text">LGBTQ+ Resources</a></li>
         </ul>
       </div>
       <div class="top-bar-right">
         <ul class="menu">
         {{#if loggedIn}}
+        <a href="/dashboard"></a>
           <li> <button id="logout" class="logout-button">Logout</button></li>
         {{else}}
           <li> <button class="signup" id="signup-form">Sign Up</button></li>
