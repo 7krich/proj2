@@ -11,12 +11,12 @@ Vote.init(
             autoIncrement: true
         },
         up_vote: {
-            type: DataTypes.BOOLEAN,
-            default: false
+            type: DataTypes.INTEGER,
+            
         },
         down_vote: {
-            type: DataTypes.BOOLEAN,
-            default: false
+            type: DataTypes.INTEGER,
+            
         },
         user_id: {
             type: DataTypes.INTEGER,
