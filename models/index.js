@@ -21,7 +21,7 @@ User.belongsToMany(Post, {
     through: Vote,
     as: 'voted_posts',
     foreignKey: 'user_id',
-    onDelete: 'SET NULL'
+    onDelete: 'CASCADE'
 });
 
 // linking the post to the liked users - viewing how many likes on a post 
@@ -29,13 +29,13 @@ Post.belongsToMany(User, {
     through: Vote,
     as: 'voted_posts',
     foreignKey: 'post_id',
-    onDelete: 'SET NULL'
+    onDelete: 'CASCADE'
 });
 
 // votes of the user 
 Vote.belongsTo(User, {
     foreignKey: 'user_id',
-    onDelete: 'SET NULL'
+    onDelete: 'CASCADE'
 });
 
 // vote on the post 
@@ -57,19 +57,19 @@ Post.hasMany(Vote, {
 // each posted comment belongs to a particular user (ref user id)
 Comment.belongsTo(User, {
     foreignKey: 'user_id',
-    onDelete: 'SET NULL'
+    onDelete: 'CASCADE'
 });
 
 // each comment belongs to a particular post (ref post id)
 Comment.belongsTo(Post, {
     foreignKey: 'post_id',
-    onDelete: 'SET NULL '
+    onDelete: 'CASCADE'
 });
 
 // a user can add many comments (ref user id)
 User.hasMany(Comment, {
     foreignKey: 'user_id',
-    onDelete: 'SET NULL'
+    onDelete: 'CASCADE'
 });
 
 // a single post can have many comments (ref post id)

@@ -46,10 +46,11 @@ router.get("/", (req, res) => {
 });
 
 router.get("/post/:id", withAuth, (req, res) => {
+  const id2 = req.params.id
+
   Post.findOne({
     where: {
-      id: 1
-      // id: req.params.id
+      id: id2
     },
     attributes: [
       'id',
@@ -90,7 +91,7 @@ router.get("/post/:id", withAuth, (req, res) => {
       return;
     }
     const post = dbPostData.get({plain: true});
-    res.render('single-post', { post });
+    res.render('single-post', { post, loggedIn: true });
   })
   .catch(err => {
     console.log(err);
