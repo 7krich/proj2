@@ -15,6 +15,7 @@ THEN I can choose a category from the dropdown menu
 
 ## Built & Deployed With
 * HTML/CSS
+* Foundation CSS
 * Node.js
 * MySql/Sequelize
 * Handlebars
