@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const {Op } = require ("sequelize")
 const sequelize = require('../../config/connection');
 const withAuth = require('../../utils/auth');
 const { Post, User, Vote, Comment, Category } = require('../../models');
@@ -6,7 +7,9 @@ const { Post, User, Vote, Comment, Category } = require('../../models');
 // get all posts
 router.get('/', (req, res) => {
     console.log('========================');
+    console.log('req.query', req.query);
     Post.findAll({
+        where: {post_content:{ [Op.substring]: req.query.input}},
         order: [['created_at', 'DESC']],
         //query config
         attributes: [
