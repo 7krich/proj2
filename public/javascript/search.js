@@ -19,7 +19,7 @@ async function searchBarHandler(event){
 
                <div class="blog-header">
                  <div class="blog-author--no-cover">
-                   <h3>${data[i].username}</h3>
+                   <h3>${data[i].user.username}</h3>
                  </div>
                </div>
              
