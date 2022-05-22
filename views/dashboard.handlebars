@@ -1,3 +1,4 @@
+
 {{> newpost}}
 
 <input id="search-input" type="text" placeholder="Search">
@@ -10,6 +11,24 @@
     </li>
     {{/each}}
 </ol>
+
+<button class="button" type="button" data-toggle="example-dropdown">Select a Category</button>
+    <div class="dropdown-pane" id="example-dropdown" data-dropdown data-auto-focus="true">
+        <form>
+            <div class="grid-container">
+                <div class="grid-x grid-margin-x">
+                    <div class="cell medium-6">
+                        <ol class="categories">
+                            <li>
+                            {{#each categories as |category|}}
+                            </li>
+                            {{/each}}
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </form> 
+    </div>
 
 <div class="dashboardquote">“If I wait for someone else to validate my existence, it will mean that I’m shortchanging myself.” – Zanele Muholi</div>
 <script src="/javascript/search.js"></script>
