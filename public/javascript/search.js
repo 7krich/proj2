@@ -1,21 +1,21 @@
-async function searchBarHandler(event){ 
-    event.preventDefault();
+async function searchBarHandler(event) {
+  event.preventDefault();
 
-    const input = document.querySelector("#search-input").value;
+  const input = document.querySelector("#search-input").value;
 
-    fetch(`/api/posts?${input ? `input=${input}`: ""}`) // if input exists, add input=${input} 
-    .then(response => {
-        if (response.ok){ 
-            return response.json()
-        }
-    }).then(
-        data => {
-            console.log({data})
-           const container =  document.querySelector("#posts-container")
-           container.innerHTML = ""
+  fetch(`/api/posts?${input ? `input=${input}` : ""}`) // if input exists, add input=${input}
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      }
+    })
+    .then((data) => {
+      console.log({ data });
+      const container = document.querySelector("#posts-container");
+      container.innerHTML = "";
 
-           for (let i = 0; i < data.length; i++) {
-               const post = `<div class="blog-container">
+      for (let i = 0; i < data.length; i++) {
+        const post = `<div class="blog-container">
 
                <div class="blog-header">
                  <div class="blog-author--no-cover">
@@ -53,13 +53,13 @@ async function searchBarHandler(event){
                    </div>
                  </ul>
                </div>
-             </div>`
-             const listItem = document.createElement('li')
-             listItem.innerHTML= post;
-             container.append(listItem)
-           }
-        }
-    )
-
+             </div>`;
+        const listItem = document.createElement("li");
+        listItem.innerHTML = post;
+        container.append(listItem);
+      }
+    });
 }
-document.querySelector("#search-button").addEventListener("click", searchBarHandler)
+document
+  .querySelector("#search-button")
+  .addEventListener("click", searchBarHandler);
