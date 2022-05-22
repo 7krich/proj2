@@ -1,35 +1,29 @@
-const upvote = document.querySelector('.up-counter');
-const upvoteBtn = document.querySelector('.up-vote-btn');
-const downvote = document.querySelector('.down-counter');
-const downvoteBtn = document.querySelector('.down-vote-btn');
-const id = window.location.toString().split('/') [window.location.toString().split('/').length - 1];
 
-console.log(id);
+// const downvote = document.querySelector('.down-counter');
+// const downvoteBtn = document.querySelector('.down-vote-btn');
 
-let upcount = 0;
-let downcount = 0;
 
-updateDisplay();
+// console.log(id);
 
-function updateDisplay(){
-    upvote.innerHTML = upcount;
-    downvote.innerHTML = downcount;
-};
+// let upcount = 0;
+// let downcount = 0;
 
-upvoteBtn.addEventListener("click",()=>{
-    upcount++;
-    updateNewCount();
-}) ;
+// updateDisplay();
 
-downvoteBtn.addEventListener("click",()=>{
-    downcount++;
-    updateNewCount();
-}) ;
+// function updateDisplay(){
+//     upvote.innerHTML = upcount;
+//     downvote.innerHTML = downcount;
+// };
 
-function updateNewCount(){
-    upvote.innerHTML = upcount;
-    downvote.innerHTML = downcount;
-};
+// downvoteBtn.addEventListener("click",()=>{
+//     downcount++;
+//     // updateNewCount();
+// }) ;
+
+// function updateNewCount(){
+//     upvote.innerHTML = upcount;
+//     downvote.innerHTML = downcount;
+// };
 
 
 // downVoteHandler();
@@ -37,11 +31,11 @@ function updateNewCount(){
 
 async function upVoteHandler(event) {
     event.preventDefault();
-    
+
+    const id = window.location.toString().split('/') [window.location.toString().split('/').length - 1];
     const response = await fetch('/api/posts/vote', {
         method: 'PUT',
         body: JSON.stringify({
-            up_vote: upcount,
             post_id: id
         }),
         headers: { "Content-Type": "application/json" }
@@ -53,7 +47,7 @@ async function upVoteHandler(event) {
     else {
         alert(response.statusText);
     }
-}
+};
 
 // async function downVoteHandler(event) {
 
@@ -75,5 +69,9 @@ async function upVoteHandler(event) {
 //     }
 // }
 
+window.onload=function() {
+    var element = document.querySelector("#up-vote-btn");
+    element.addEventListener("click", upVoteHandler);
+}
 
-upVoteHandler();
+// document.querySelector("#up-vote-btn").addEventListener("click", upVoteHandler);
