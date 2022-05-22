@@ -269,13 +269,12 @@ button {
 }
 
 .main {
-  width: 100%;
+width:50%;
   align-items: center;
 }
 
 .sub-main {
-  width: 100%;
-  margin: 22px;
+  width: 40%;
   display: flex;
 }
 
@@ -285,15 +284,14 @@ button {
   background-color: var(--blue-color);
   color: black;
   border: none;
-  padding: 20px;
-  width: 200px;
+  padding: 25px 50px 25px 50px;
+  width: 100%
   transition: all 0.5s;
   display: flex;
   text-align: center;
   justify-content: center;
   cursor: pointer;
   font-size: 24px;
-  margin: 0 0 0 100px;
   box-shadow: 5px 5px #888888;
 }
 
@@ -748,7 +746,7 @@ h3 {
   background-color: var(--purple-color);
   text-transform: lowercase;
   letter-spacing: 1px;
-  width: 10%;
+  width: 50%;
   padding: 1rem;
   transition: all ease .4s;
 }
@@ -759,8 +757,15 @@ h3 {
 }
 
 .dashboardpgfunctions {
-  display: flex;
-}
+    padding: 1rem 1.5em;
+    display: flex;
+    border-radius: .5rem;
+    background-color: #b1b1b1;
+    width: 100%;
+    color: black;
+    box-shadow: 5px 5px #888888;
+    align-items: center;
+  }
 
 .dashboardbtn {
   width: 100%;
@@ -774,4 +779,36 @@ h3 {
   margin: 25px;
   padding: 20px;
   float: right;
+}
+
+.newpostbtn {
+  width: 50%;
+  display: flex;
+  margin: 25px;
+  padding: 20px;
+  float: right;
+}
+
+.search-button {
+  border-radius: 30px;
+  border: 1px solid #fff;
+  color: black;
+  background-color: var(--yellow-color);
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  width: 30%;
+  height: 30px;
+  padding: 1rem;
+  transition: all ease .4s;
+}
+
+.search-button:hover {
+  background-color: #44c8ed;
+  border-color: #44c8ed;
+}
+
+.title {
+  text-decoration: underline;
+  text-align: center;
 }

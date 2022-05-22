@@ -1,11 +1,12 @@
 <div class="dashboardpgfunctions">
     <article class="newpostbtn">{{> newpost}}</article>
     <article class="search">
-        <input id="search-input" type="text" placeholder="Search Keywords">
-        <button id="search-button">Search</button>
+        <input id="search-input" type="text" placeholder="Please Search for Keywords">
+        <button class="search-button" id="search-button">Search</button>
     </article>
 </div>
-
+<br><br>
+<h1 class="title">User Posts</h1>
 <ol id="posts-container" class="posts">
     {{#each posts as |post|}}
     <li class="postwidth">
