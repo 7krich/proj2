@@ -16,12 +16,12 @@
         <ul class="menu">
           <li><img width="50px" height="50px" src="/stylesheet/assets/Brainz2.png"></li>
           <li><a href="/dashboard" class="menu-text">LGBTQ+ Resources</a></li>
-          <li><a href="https://www.glaad.org/about">GLAAD</a></li>
-          <li><a href="https://www.thetrevorproject.org/">Trevor Project</a></li>
-          <li><a href="https://thesafezoneproject.com/learn/">The Safe Zone Project</a></li>
-          <li><a href="http://grpride.org/education-training/">Grand Rapids Pride</a></li>
-          <li><a href="https://www.apa.org/pi/lgbt/resources">American Psychological Association</a></li>
-          <li><a href="https://www.nalp.org/lgbtq_organizations">Legal Support</a></li>
+          <li><a class="res1" href="https://www.glaad.org/about">GLAAD</a></li>
+          <li><a class="res2" href="https://www.thetrevorproject.org/">Trevor Project</a></li>
+          <li><a class="res3" href="https://thesafezoneproject.com/learn/">The Safe Zone Project</a></li>
+          <li><a class="res4" href="http://grpride.org/education-training/">Grand Rapids Pride</a></li>
+          <li><a class="res5" href="https://www.apa.org/pi/lgbt/resources">American Psychological Association</a></li>
+          <li><a class="res6" href="https://www.nalp.org/lgbtq_organizations">Legal Support</a></li>
         </ul>
       </div>
       <div class="top-bar-right">
@@ -37,9 +37,10 @@
 
     <div class="callout large primary">
       <div class="row column text-center">
-        <h1>The B Word</h1>
+        <h1 class="thebword"><span>The B Word</span></h1>
       </div>
     </div>
+    <div class="word" id="word"><span class="randomWord" id="randomWord"></span></div>
 <main>
 
             {{{ body }}}
@@ -57,6 +58,7 @@
     {{/if}} 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+     <script src="/javascript/randomwords.js"></script>v
     <script>
       $(document).foundation();
     </script>
