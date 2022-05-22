@@ -16,7 +16,7 @@ Vote.init(
         },
         down_vote: {
             type: DataTypes.INTEGER,
-
+            
         },
         user_id: {
             type: DataTypes.INTEGER,
