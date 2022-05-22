@@ -62,4 +62,5 @@ async function searchBarHandler(event){
     )
 
 }
+
 document.querySelector("#search-button").addEventListener("click", searchBarHandler)
