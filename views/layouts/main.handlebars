@@ -1,66 +1,68 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The B Word</title>
-    <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-    <link rel="stylesheet" href="/stylesheet/app.css">
-    <script src="https://kit.fontawesome.com/367fd83db2.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The B Word</title>
+  <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+  <link rel="stylesheet" href="/stylesheet/app.css">
+  <script src="https://kit.fontawesome.com/367fd83db2.js" crossorigin="anonymous"></script>
 </head>
 
-<!--Nav placeholder for pull request-->
-<div class="top-bar">
-      <div class="top-bar-left">
-        <ul class="menu">
-          <li><img width="50px" height="50px" src="/stylesheet/assets/Brainz2.png"></li>
-          <li><a href="/dashboard" class="menu-text">LGBTQ+ Resources</a></li>
-          <li><a class="res1" href="https://www.glaad.org/about">GLAAD</a></li>
-          <li><a class="res2" href="https://www.thetrevorproject.org/">Trevor Project</a></li>
-          <li><a class="res3" href="https://thesafezoneproject.com/learn/">The Safe Zone Project</a></li>
-          <li><a class="res4" href="http://grpride.org/education-training/">Grand Rapids Pride</a></li>
-          <li><a class="res5" href="https://www.apa.org/pi/lgbt/resources">American Psychological Association</a></li>
-          <li><a class="res6" href="https://www.nalp.org/lgbtq_organizations">Legal Support</a></li>
-        </ul>
-      </div>
-      <div class="top-bar-right">
-        <ul class="menu">
+<body>
+  <!--Nav placeholder for pull request-->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <ul class="menu">
+        <li><img width="50px" height="50px" src="/stylesheet/assets/Brainz2.png"></li>
+        <li><a href="/dashboard" class="menu-text">LGBTQ+ Resources</a></li>
+        <li><a class="res1" href="https://www.glaad.org/about">GLAAD</a></li>
+        <li><a class="res2" href="https://www.thetrevorproject.org/">Trevor Project</a></li>
+        <li><a class="res3" href="https://thesafezoneproject.com/learn/">The Safe Zone Project</a></li>
+        <li><a class="res4" href="http://grpride.org/education-training/">Grand Rapids Pride</a></li>
+        <li><a class="res5" href="https://www.apa.org/pi/lgbt/resources">American Psychological Association</a></li>
+        <li><a class="res6" href="https://www.nalp.org/lgbtq_organizations">Legal Support</a></li>
+      </ul>
+    </div>
+    <div class="top-bar-right">
+      <ul class="menu">
         {{#if loggedIn}}
         <a href="/dashboard"></a>
         <li> <button id="logout" class="logout-button">Logout</button></li>
         {{/if}}
-          <li> <b
-        </ul>
-      </div>
+      </ul>
     </div>
+  </div>
 
-    <div class="callout large primary">
-      <div class="row column text-center">
-        <h1 class="thebword"><span>The B Word</span></h1>
-      </div>
+  <div class="callout large primary">
+    <div class="row column text-center">
+      <h1 class="thebword"><span>The B Word</span></h1>
     </div>
-    <div class="word" id="word"><span class="randomWord" id="randomWord"></span></div>
-<main>
+  </div>
+  <div class="word" id="word"><span class="randomWord" id="randomWord"></span></div>
+  <main>
 
-            {{{ body }}}
+    {{{ body }}}
 
-        </main>
+  </main>
 
-        <footer>
+  <footer class="footer">
+    &copy; 2022 Alex Wiles, Rachel Gray, Jeremy Jakobsons, Kyle Richnafsky, Evan Kuck
+  </footer>
 
-        </footer>
+  </div>
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
 
-    </div>
-    {{#if loggedIn}}
-    <script src="/javascript/logout.js"></script>
-
-    {{/if}} 
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
-     <script src="/javascript/randomwords.js"></script>v
-    <script>
-      $(document).foundation();
-    </script>
+  {{/if}}
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+  <script src="/javascript/randomwords.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
 </body>
+
 </html>
