@@ -1,6 +1,9 @@
 {{> newpost}}
 
-<ol class="posts">
+<input id="search-input" type="text" placeholder="Search">
+<button id="search-button">Search</button>
+
+<ol id="posts-container" class="posts">
     {{#each posts as |post|}}
     <li class="postwidth">
         {{> posts post}}
@@ -9,5 +12,6 @@
 </ol>
 
 <div class="dashboardquote">“If I wait for someone else to validate my existence, it will mean that I’m shortchanging myself.” – Zanele Muholi</div>
+<script src="/javascript/search.js"></script>
 <script src="/javascript/randomwords.js"></script>
 <!--{{> filtermodal}}
