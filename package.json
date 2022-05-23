@@ -13,7 +13,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "develop":"nodemon server.js"
+    "develop": "nodemon server.js"
   },
   "name": "proj2",
   "description": "",

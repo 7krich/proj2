@@ -1,4 +1,10 @@
 
+<div class="main">
+  <div class="sub-main">
+     <a class="dashboardbtn" href="../dashboard">Previous Page</a>
+  </div>
+</div>
+
 {{> posts post}}
 
   <div class="blog-footer">
@@ -13,14 +19,6 @@
           </button>
         </span>
       </li>
-      {{!-- <li class="negative">
-        <span>
-          <button class="numero down-vote-btn" id="down-vote-btn">
-            <img src="/stylesheet/assets/thumbsdown.png">
-            <p class="down-counter">0</p>
-          </button>
-        </span>
-      </li> --}}
       </div>
     </ul>
   </div>
@@ -40,6 +38,8 @@
     </div>
   </div>
 </form>
+</article>
+<br><br>
 {{/if}}
 
 {{> comments post.comments}}
