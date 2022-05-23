@@ -1,9 +1,9 @@
-
 <div class="main">
   <div class="sub-main">
      <a class="dashboardbtn" href="../dashboard">Previous Page</a>
   </div>
 </div>
+
 
 {{> posts post}}
 
@@ -19,6 +19,14 @@
           </button>
         </span>
       </li>
+      {{!-- <li class="negative">
+        <span>
+          <button class="numero down-vote-btn" id="down-vote-btn">
+            <img src="/stylesheet/assets/thumbsdown.png">
+            <p class="down-counter">0</p>
+          </button>
+        </span>
+      </li> --}}
       </div>
     </ul>
   </div>
@@ -41,7 +49,6 @@
 </article>
 <br><br>
 {{/if}}
-
 {{> comments post.comments}}
 <br><br>
 <div class="singlepostquote">“Equality means more than passing laws. The struggle is really won in the hearts and minds of the community, where it really counts.” – Barbara Gittings</div>
