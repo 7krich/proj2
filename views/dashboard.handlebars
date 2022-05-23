@@ -1,6 +1,14 @@
-{{> newpost}}
+<div class="dashboardpgfunctions">
+    <article class="newpostbtn">{{> newpost}}</article>
+    <article class="search">
+        <input id="search-input" type="text" placeholder="Please Search for Keywords">
+        <button class="search-button" id="search-button">Search</button>
+    </article>
+</div>
+<br><br>
+<h1 class="title">User Posts</h1>
 
-<ol class="posts">
+<ol id="posts-container" class="posts">
     {{#each posts as |post|}}
     <li class="postwidth">
         {{> posts post}}
@@ -8,6 +16,8 @@
     {{/each}}
 </ol>
 
+
 <div class="dashboardquote">“If I wait for someone else to validate my existence, it will mean that I’m shortchanging myself.” – Zanele Muholi</div>
+<script src="/javascript/search.js"></script>
 <script src="/javascript/randomwords.js"></script>
-<!--{{> filtermodal}}
+<script src="/javascript/dropdown.js"></script>

@@ -6,10 +6,10 @@ const apiRoutes = require('./api');
 const { append } = require('express/lib/response');
 
 router.use('/api', apiRoutes);
-router.use('/', homeRoutes);
 router.use('/dashboard', dashboardRoutes);
+router.use('/', homeRoutes);
 
-router.use((req, res) => {
+router.use('*',(req, res) => {
   res.status(404).end();
 });
 

@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const {Op } = require ("sequelize")
 const sequelize = require('../../config/connection');
 const withAuth = require('../../utils/auth');
 const { Post, User, Vote, Comment, Category } = require('../../models');
@@ -6,7 +7,9 @@ const { Post, User, Vote, Comment, Category } = require('../../models');
 // get all posts
 router.get('/', (req, res) => {
     console.log('========================');
+    console.log('req.query', req.query);
     Post.findAll({
+        // where: {post_content:{ [Op.like]: req.query.input}},
         order: [['created_at', 'DESC']],
         //query config
         attributes: [
@@ -123,7 +126,7 @@ router.put('/vote', withAuth, (req, res) => {
     // upvotes should only work if someone is logged in
     if (req.session) {
       // pass session id along with all destructured properties on req.body
-        Post.vote({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User })
+        Post.vote({ ...req.body, user_id: req.session.user_id }, { Vote, Comment, User, Category })
         .then(updatedVoteData => res.json(updatedVoteData))
         .catch(err => {
             console.log(err);
