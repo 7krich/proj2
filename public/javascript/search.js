@@ -19,7 +19,8 @@ async function searchBarHandler(event) {
 
         <div class="post-header">
         <div class="post-author--no-cover">
-          <h4>${data[i].username}</h4>
+          <h4>${data[i].user.username}</h4>
+
                  </div>
                </div>
              
