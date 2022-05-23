@@ -6,7 +6,7 @@ Create a comfortable place for the LGBTQIA+ community to express themselves.
 ## Motivation for Development:
 There aren’t many platforms available to give the LGBTQIA+ community a voice in a place free of judgment and with the ability to stay anonymous.
 
-## User Story:
+## User Story
 As A person belonging to the LGBTQIA+ community
 I WANT a place where I can speak freely and receive support and/or advice
 AND have the ability to remain anonymous
