@@ -353,6 +353,11 @@ nav ul {
     cursor: pointer;
   }
 
+  .main {
+    width:50%;
+      align-items: center;
+    }
+
   .sub-main {
     width: 40%;
     display: flex;
@@ -401,6 +406,11 @@ nav ul {
   }
 
 
+  body {
+    background:#e4e2e0; 
+    box-sizing: border-box;
+  }
+
 /*Post Contents*/
 
 .post-container {
@@ -425,6 +435,12 @@ nav ul {
     width: 75%
   }
 }
+
+
+  .postwidth {
+    display: flex;
+    justify-content: center;
+  }
 
   .post-container a {
     color: #4d4dff;
@@ -468,12 +484,14 @@ nav ul {
   .post-body {
     margin: 0 auto;
     width: 80%;
+
   }
 
   .post-title h2 a {
     color: rgb(93, 93, 93);
     font-weight: 100;
     font-style: italic;
+    float:
   }
 
   .post-summary p {

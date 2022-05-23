@@ -2,13 +2,17 @@
 
   <div class="post-header">
     <div class="post-author--no-cover">
+      {{#if anonymous}}
+      <h4>Anonymous</h4>
+      {{else}}
       <h4>{{user.username}}</h4>
+      {{/if}}
     </div>
   </div>
 
   <div class="post-body">
     <div class="post-title">
-      <h2><a href="/post/:{{id}}">{{title}}</a></h2>
+      <h2><a href="/post/{{id}}">{{title}}</a></h2>
     </div>
     <div class="blog-summary">
       <p>{{post_content}}</p>

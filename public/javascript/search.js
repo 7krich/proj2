@@ -32,7 +32,7 @@ async function searchBarHandler(event) {
                  <div class="blog-summary">
                    <p>${data[i].post_content}</p>
                </div>
-               <div class="blog-footer">
+               <div class="post-footer">
                  <ul>
                    <li class="published-date"></li>
                    </div>

@@ -18,6 +18,7 @@ class Post extends Model {
                     'post_content',
                     'category_id',
                     'created_at',
+                    'anonymous',
                     [
                         sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id & vote.up_vote = true)'), 'upvote_count'
                     ],
@@ -28,7 +29,7 @@ class Post extends Model {
                 include: [
                     {
                     model: models.Comment,
-                    attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+                    attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at', 'anonymous'],
                         include: {
                             model: models.User,
                             attributes: ['username']
@@ -43,6 +44,8 @@ class Post extends Model {
     });
 }
 }
+
+console.log(Post)
 
 Post.init(
     {
