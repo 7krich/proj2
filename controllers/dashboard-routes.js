@@ -14,7 +14,6 @@ router.get('/', withAuth, (req, res) => {
         'post_content',
         'title',
         'created_at',
-        'anonymous',
         [sequelize.literal('(SELECT COUNT(*) FROM vote WHERE post.id = vote.post_id)'), 'vote_count']
       ],
       include: [
